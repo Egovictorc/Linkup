@@ -1,0 +1,39 @@
+/*
+  LinkUp stylesheet
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+}
+
+body>div.container {
+  width: 100%;
+}
+
+body>div.container>header {
+  display: flex;
+  flex-direction: row;
+}
+
+body>div.container>header>h2 {
+  color: dodgerblue;
+}
+
+body>div.container>header>nav.topNav>ul.navBar {
+
+}
+
+body>div.container>header>nav.topNav>ul.navBar>li {
+  display: inline-block;
+  list-style-type: none;
+  
+}
+
+body>div.container>header>nav.topNav>ul.navBar>li>a {
+  color: red;
+  text-decoration: none;
+}
