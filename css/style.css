@@ -18,13 +18,14 @@ body{
 body>div.container {
   padding-top: 2em;
 }
-body>div.container>header {
-  background-image: url("../asset/brokenLink@2x.png");
-  background-position: 0 50%;
+header {
+  /*background-image: url("../asset/brokenLink@2x.png");*/
+  /*background-position: 0 50%;
   background-repeat: no-repeat;
   -webkit-background-size: 2.5em;
   background-size: 1.75em;
-  padding-left: 2.5em;
+  padding-left: 2.5em;*/
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,7 +35,20 @@ body>div.container>header {
   line-height: 41px;
   height: 41px;
 }
-body>div.container>header>h2 {
+
+header img{
+  width: 1.75em;
+  height: 1.75em;
+  margin-top: 5px;
+  margin-right: 10px;
+
+}
+
+.logo{
+  display: flex;
+}
+
+.logo h2 {
   color: rgb(52, 128, 227);
 }
 body>div.container>header>nav.topNav {
