@@ -16,7 +16,7 @@ body{
   width: 100%;
 }
 body>div.container {
-  padding-top: 2em;
+  
 }
 header {
   /*background-image: url("../asset/brokenLink@2x.png");*/
@@ -26,14 +26,28 @@ header {
   background-size: 1.75em;
   padding-left: 2.5em;*/
   background-color: white;
+
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  /*margin: auto;*/
+  line-height: 41px;
+
+  height: 10vh;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+
+}
+
+.cont{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: sticky;
-  top: 0;
-  margin: auto;
-  line-height: 41px;
-  height: 41px;
+  margin-right: 100px;
+  margin-left: 100px;
+  padding-top: 10px;
+
 }
 
 header img{
@@ -41,7 +55,6 @@ header img{
   height: 1.75em;
   margin-top: 5px;
   margin-right: 10px;
-
 }
 
 .logo{
@@ -51,85 +64,77 @@ header img{
 .logo h2 {
   color: rgb(52, 128, 227);
 }
-body>div.container>header>nav.topNav {
+header nav.topNav1 {
   display: flex;
-  flex-direction: column;
+  
 }
-body>div.container>header>nav.topNav>i {
-  align-self: flex-end;
-  padding: 12.5px;
-  position: absolute;
-  right: 0;
-  top: 0;
+ul.navBar1 {
+  /*overflow: hidden;*/
+  display: flex;
 }
-body>div.container>header>nav.topNav>ul.navBar {
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 41px;
-  transition: .5s ease;
-  width: 0;
-  z-index: 1;
-}
-body>div.container>header>nav.topNav:hover>ul.navBar {
-  width: 100%;
-}
-body>div.container>header>nav.topNav>ul.navBar>li {
+ul.navBar1>li {
   list-style-type: none;
   line-height: 41px;
   height: 41px;
+  margin-right: 10px;
 }
-body>div.container>header>nav.topNav>ul.navBar>li>a {
-  background-color: rgba(229, 49, 103, .9);
+ul.navBar1>li>a {
+  
   color: #000;
   display: block;
   text-align: center;
   text-decoration: none;
   border-top: 1px solid #fff;
 }
-body>div.container>header>nav.topNav>ul.navBar>li>a:hover {
+
+.login {
+  margin-left: 60px;
+}
+ul.navBar1>li>a:hover {
   background-color: #fff;
   color: rgba(229, 49, 103, .9);
 }
-body>div.container>header>div.logSign {
+/*div.logSign1 {
   position: absolute;
   right: 0;
   top: 45px;
   width: 100%;
-}
-body>div.container>header>div.logSign>button {
+}*/
+/*.topNav1 button {
   border: none;
-  border-radius: 2em;
+  border-radius: 1em;
   display: block;
-  width: 100%;
-}
-body>div.container>header>div.logSign>button:first-child {
-  margin-bottom: .35em;
-}
-body>div.container>header>div.logSign>button>a {
-  align-self: flex-start;
+  width: 90px;
+}*/
+
+.button {
+  border-radius: 40px;
   border: none;
-  border-radius: 2em;
   display: block;
-  padding: 11px 20px;
   text-decoration: none;
+  margin-right: 10px;
+  width: 130px;
+  height: 40px;
+  margin-left: 10px;
+  text-align: center;
 }
-body>div.container>header>div.logSign>button>a#login{
+.topNav1 a#login{
+
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
 }
-body>div.container>header>div.logSign>button>a#login:hover {
+.topNav1 a#login:hover {
   color: #fff;
   background-color: rgb(229, 49, 103);
   border: 1px solid #fff;
 }
-body>div.container>header>div.logSign>button>a#signup {
+.topNav1 a#signup {
   color: #fff;
   background-color: rgb(229, 49, 103);
   border: 1px solid #fff;
 }
-body>div.container>header>div.logSign>button>a#signup:hover{
+.topNav1 a#signup:hover{
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
@@ -140,60 +145,57 @@ body>div.container>header>div.logSign>button>a#signup:hover{
     General styles first
   */
 
-body>div.container>section {
-    margin: 80px auto 0;
-}
-body>div.container>section>article {
-  margin: auto;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 4.165%;
+  .main-section{
+    display: flex;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-}
-body>div.container>section>article:not(#bestArtisans){
-  margin-bottom: 3em;
-}
-body>div.container>section#topSection>article>div.left {
-  width: 80%;
-}
-body>div.container>section#topSection>article#skilledArtisan>div.left {
-  margin-bottom: 1.5em;
-}
-body>div.container>section#topSection>article#skilledArtisan>div.left>p:first-child {
-  font-size: 1.5em;
+  body>div.container>section {
+      /*margin: 80px auto 0;*/
+  }
+
+  .left{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+     
+  }
+
+  .left p{
+    
+  }
+
+.left>h2 {
+  font-size: 45px;
   margin-bottom: .5em;
-}
-body>div.container>section#topSection>article#skilledArtisan>div.left>button {
-  border: 0;
-  border-radius: 1.75em;
-  margin-top: 2em;
-  width: 90%;
+  font-weight: 300;
 }
 
-body>div.container>section#topSection>article#skilledArtisan>div.left>button>a {
-  background-color: rgb(229, 49, 103);
-  border-radius: 1.75em;
-  color: #fff;
+.request{
+  background-color: Crimson;  
+  border-radius: 20px;
+  color: white;
+  padding: .5em;
   text-decoration: none;
-  display: block;
-  padding: 12px 25px;
-  font-size: 1.25em;
+  margin-top: 20px;
+  width: 200px;
+  text-align: center;
+  transition: all 0.25s ease;
+  padding: 10px;
 }
 
-body>div.container>section#topSection>article#skilledArtisan>div.left>button>a:hover {
-  color: rgb(229, 49, 103);
-  background-color: #fff;
-  border: 1px solid rgb(229, 49, 103);
-  padding: 11px 24px;
+.request:hover{
+    color:Crimson;
+    background: white;
+    border: 1px solid Crimson;
 }
-body>div.container>section#topSection>article#skilledArtisan>img{
-  width: 50%;
+
+.right{
+  width: 200px;
   height: auto;
-  max-width: 160px;
-  max-height: 200px;
+  
 }
 
   /* linkAction */
