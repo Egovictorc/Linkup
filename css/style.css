@@ -16,7 +16,7 @@ body{
   width: 100%;
 }
 body>div.container {
-  padding-top: 2em;
+  padding-top: 1em;
 }
 body>div.container>header {
   background-image: url("../asset/brokenLink@2x.png");
@@ -97,8 +97,9 @@ body>div.container>header>div.logSign>button>a {
   border: none;
   border-radius: 2em;
   display: block;
-  padding: 11px 20px;
+  padding: 9px 20px;
   text-decoration: none;
+  font-size: 1.25em;
 }
 body>div.container>header>div.logSign>button>a#login{
   color: rgb(229, 49, 103);
@@ -601,11 +602,11 @@ footer p {
   }
 
   body>div.container>header>nav.topNav>ul.navBar {
-    right: 21%;
+    right: 23%;
   }
   body>div.container>header>div.logSign {
     top: 0;
-    width: 20%;
+    width: 22%;
   }
   /*
     section begins here

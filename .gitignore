@@ -1,0 +1,10 @@
+
+*.json
+node_modules/
+main.js
+.eslintrc*
+css/
+*.txt
+css/all.css
+css/all.min.css
+css/fontawesome.css
