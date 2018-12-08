@@ -16,7 +16,18 @@ body{
   width: 100%;
 }
 body>div.container {
-  padding-top: 1em;
+  padding-top: .5em;
+}
+.container .oval {
+  border-radius: 55%;
+  width: 180px;
+  height: 100px;
+  background-color: dodgerblue;
+  transform: rotate(-120deg);
+  position: absolute;
+  top: -70px;
+  left: -90px;
+
 }
 body>div.container>header {
   background-image: url("../asset/brokenLink@2x.png");
@@ -30,7 +41,8 @@ body>div.container>header {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 41px;
   height: 41px;
 }
@@ -85,9 +97,9 @@ body>div.container>header>div.logSign {
 }
 body>div.container>header>div.logSign>button {
   border: none;
-  border-radius: 2em;
   display: block;
   width: 100%;
+  background-color: inherit;
 }
 body>div.container>header>div.logSign>button:first-child {
   margin-bottom: .35em;
@@ -95,21 +107,19 @@ body>div.container>header>div.logSign>button:first-child {
 body>div.container>header>div.logSign>button>a {
   align-self: flex-start;
   border: none;
-  border-radius: 2em;
   display: block;
   padding: 9px 20px;
+  border-radius: 2em;
   text-decoration: none;
   font-size: 1.25em;
 }
 body>div.container>header>div.logSign>button>a#login{
-  color: rgb(229, 49, 103);
-  background-color: #fff;
-  border: 1px solid rgb(229, 49, 103);
+  color: #000;
+
 }
 body>div.container>header>div.logSign>button>a#login:hover {
-  color: #fff;
-  background-color: rgb(229, 49, 103);
-  border: 1px solid #fff;
+  color: rgb(229, 49, 103);
+
 }
 body>div.container>header>div.logSign>button>a#signup {
   color: #fff;
@@ -128,7 +138,7 @@ body>div.container>header>div.logSign>button>a#signup:hover{
   */
 
 body>div.container>section {
-    margin: 80px auto 0;
+    margin: 110px auto 0;
 }
 body>div.container>section>article {
   margin: auto;
@@ -392,6 +402,9 @@ footer p {
   /*
     header begins here
   */
+  body>div.container>header {
+    margin-left: 10%;
+  }
   body>div.container>header>div.logSign {
     width: 70%;
     display: flex;
@@ -463,7 +476,12 @@ footer p {
   body>div.container>section#middleSection>article>div.left, body>div.container>section#bottomSection>article>div.left {
     width: 50%;
   }
-
+  /*
+    position #getQuote quotediv to the right
+  */
+#getQuote #quotediv {
+  order: 1;
+}
 
 }
 
@@ -529,26 +547,20 @@ footer p {
   }
   body>div.container>header>nav.topNav>ul.navBar>li>a {
     background-color: #ffffff;
-  }
-
-
-  /*
-  body>div.container>header>nav.topNav>ul.navBar>li:hover {
-    line-height: 29px;
-    height: 29px;
-  }
-  */
-  body>div.container>header>nav.topNav>ul.navBar>li>a {
     border: 0;
-    padding: 0 5.5px 0 5.5px;
+    padding: 0 5.5px;
   }
-  body>div.container>header>nav.topNav>ul.navBar>li>a:hover {
-    border-top: 1px solid rgb(229, 49, 103);
-    border-bottom: 1px solid rgb(229, 49, 103);
-  }
+
   body>div.container>header>div.logSign {
-    width: 50%;
     display: flex;
+  }
+  body>div.container>header>div.logSign>button {
+    width: 50%;
+    border-radius: 2em;
+  }
+  body>div.container>header>div.logSign>button:first-child {
+    width: 38%;
+    background-color: red;
   }
 
   body>div.container>section#middleSection>article>img, body>div.container>section#bottomSection>article>img  {
