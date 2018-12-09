@@ -12,31 +12,37 @@
   /* font-family: 'Open Sans', sans-serif; */
   font-family: 'Source Sans Pro', sans-serif;
 }
-body{
+body {
   width: 100%;
 }
-body>div.container {
+.container {
   padding-top: .5em;
 }
-.container .oval {
+.oval {
   border-radius: 55%;
   width: 180px;
   height: 100px;
   background-color: dodgerblue;
   transform: rotate(-120deg);
+  -ms-transform: rotate(-120deg);
+  -webkit-transform: rotate(-120deg);
   position: absolute;
   top: -70px;
   left: -90px;
-
 }
-body>div.container>header {
+.container>header {
   background-image: url("../asset/brokenLink@2x.png");
   background-position: 0 50%;
   background-repeat: no-repeat;
   -webkit-background-size: 2.5em;
   background-size: 1.75em;
   padding-left: 2.5em;
+  display: -webkit-flex;
+  display: -ms-flex;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   position: sticky;
@@ -46,21 +52,23 @@ body>div.container>header {
   line-height: 41px;
   height: 41px;
 }
-body>div.container>header>h2 {
+.container>header>h2 {
   color: rgb(52, 128, 227);
 }
-body>div.container>header>nav.topNav {
+header nav {
   display: flex;
   flex-direction: column;
 }
-body>div.container>header>nav.topNav>i {
+header nav>i {
   align-self: flex-end;
   padding: 12.5px;
+  /*
   position: absolute;
   right: 0;
   top: 0;
+  */
 }
-body>div.container>header>nav.topNav>ul.navBar {
+header nav>ul.navBar {
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -69,15 +77,15 @@ body>div.container>header>nav.topNav>ul.navBar {
   width: 0;
   z-index: 1;
 }
-body>div.container>header>nav.topNav:hover>ul.navBar {
+header nav:hover>ul.navBar {
   width: 100%;
 }
-body>div.container>header>nav.topNav>ul.navBar>li {
+header nav .navBar>li {
   list-style-type: none;
   line-height: 41px;
   height: 41px;
 }
-body>div.container>header>nav.topNav>ul.navBar>li>a {
+header nav .navBar>li>a {
   background-color: rgba(229, 49, 103, .9);
   color: #000;
   display: block;
@@ -85,26 +93,32 @@ body>div.container>header>nav.topNav>ul.navBar>li>a {
   text-decoration: none;
   border-top: 1px solid #fff;
 }
-body>div.container>header>nav.topNav>ul.navBar>li>a:hover {
+header nav .navBar>li>a:hover {
   background-color: #fff;
   color: rgba(229, 49, 103, .9);
 }
-body>div.container>header>div.logSign {
+.logSign {
+  flex-basis: 100%;
+  background-color: orange;
+  /*
   position: absolute;
   right: 0;
   top: 45px;
   width: 100%;
+  */
 }
-body>div.container>header>div.logSign>button {
+.logSign button {
   border: none;
   display: block;
   width: 100%;
-  background-color: inherit;
+  border-radius: 2em;
+  /* background-color: inherit; */
+  background-color: red;
 }
-body>div.container>header>div.logSign>button:first-child {
+.logSign button:first-child {
   margin-bottom: .35em;
 }
-body>div.container>header>div.logSign>button>a {
+.logSign button>a {
   align-self: flex-start;
   border: none;
   display: block;
@@ -113,20 +127,20 @@ body>div.container>header>div.logSign>button>a {
   text-decoration: none;
   font-size: 1.25em;
 }
-body>div.container>header>div.logSign>button>a#login{
+.logSign button>a#login{
   color: #000;
 
 }
-body>div.container>header>div.logSign>button>a#login:hover {
+.logSign button>a#login:hover {
   color: rgb(229, 49, 103);
 
 }
-body>div.container>header>div.logSign>button>a#signup {
+.logSign button>a#signup {
   color: #fff;
   background-color: rgb(229, 49, 103);
   border: 1px solid #fff;
 }
-body>div.container>header>div.logSign>button>a#signup:hover{
+.logSign button>a#signup:hover{
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
@@ -137,10 +151,10 @@ body>div.container>header>div.logSign>button>a#signup:hover{
     General styles first
   */
 
-body>div.container>section {
+section {
     margin: 110px auto 0;
 }
-body>div.container>section>article {
+section>article {
   margin: auto;
   display: -webkit-flex;
   display: -ms-flex;
@@ -150,27 +164,27 @@ body>div.container>section>article {
   padding: 0 4.165%;
 
 }
-body>div.container>section>article:not(#bestArtisans){
+section>article:not(#bestArtisans){
   margin-bottom: 3em;
 }
-body>div.container>section#topSection>article>div.left {
+#topSection>article>.left {
   width: 80%;
 }
-body>div.container>section#topSection>article#skilledArtisan>div.left {
+#topSection>#skilledArtisan>.left {
   margin-bottom: 1.5em;
 }
-body>div.container>section#topSection>article#skilledArtisan>div.left>p:first-child {
+#topSection>#skilledArtisan>.left>p:first-child {
   font-size: 1.5em;
   margin-bottom: .5em;
 }
-body>div.container>section#topSection>article#skilledArtisan>div.left>button {
+#topSection>#skilledArtisan>.left>button {
   border: 0;
   border-radius: 1.75em;
   margin-top: 2em;
   width: 90%;
 }
 
-body>div.container>section#topSection>article#skilledArtisan>div.left>button>a {
+#topSection>#skilledArtisan>.left>button>a {
   background-color: rgb(229, 49, 103);
   border-radius: 1.75em;
   color: #fff;
@@ -180,13 +194,13 @@ body>div.container>section#topSection>article#skilledArtisan>div.left>button>a {
   font-size: 1.25em;
 }
 
-body>div.container>section#topSection>article#skilledArtisan>div.left>button>a:hover {
+#topSection>#skilledArtisan>.left>button>a:hover {
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
   padding: 11px 24px;
 }
-body>div.container>section#topSection>article#skilledArtisan>img{
+#topSection>#skilledArtisan>img{
   width: 50%;
   height: auto;
   max-width: 160px;
@@ -194,19 +208,19 @@ body>div.container>section#topSection>article#skilledArtisan>img{
 }
 
   /* linkAction */
-body>div.container>section#topSection>article#linkAction>div.left {
+#topSection>#linkAction>.left {
     background-image: linear-gradient(to right, lightgray, #fff);
     padding: 1.5em;
 
 }
-body>div.container>section#topSection>article#linkAction>div.left>h2,
-body>div.container>section#topSection>article#linkAction>div.left>p {
+#topSection>#linkAction>.left>h2,
+#topSection>#linkAction>.left>p {
     margin-bottom: .5em;
 }
-body>div.container>section#topSection>article#linkAction>div.left>p:last-child {
+#topSection>#linkAction>.left>p:last-child {
     margin-bottom: 1.5em;
 }
-body>div.container>section#topSection>article#linkAction>img {
+#topSection>#linkAction>img {
   width: 80%;
   height: auto;
   max-width: 250px;
@@ -216,20 +230,20 @@ body>div.container>section#topSection>article#linkAction>img {
   /* style for middleSection  (General styles first)*/
 
 
-body>div.container>section#middleSection>header {
+#middleSection>header {
   text-align: center;
   margin-bottom: 1.5em;
 }
 
-body>div.container>section#middleSection>article>div.left {
+#middleSection>article>div.left {
   width: 80%;
 }
-body>div.container>section#middleSection>article>div>h3,
-body>div.container>section#bottomSection>article>div>h3 {
+#middleSection>article>div>h3,
+#bottomSection>article>div>h3 {
   margin-bottom: .5em;
 }
 
-body>div.container>section#middleSection>article>div>p,
+#middleSection>article>div>p,
 body>div.container>section#bottomSection>article>div>p {
   margin-bottom: 1.5em;
 }
@@ -238,7 +252,7 @@ body>div.container>section#bottomSection>article>div>p {
 /*
   style for all middleSection images below
 */
-body>div.container>section#middleSection>article>img, body>div.container>section#bottomSection>article>img {
+#middleSection>article>img, #bottomSection>article>img {
   width: 20%;
   height: auto;
 }
@@ -246,13 +260,13 @@ body>div.container>section#middleSection>article>img, body>div.container>section
 /*
   bottomSection
 */
-body>div.container>section#bottomSection {
+#bottomSection {
   background-color: rgb(40, 176, 242);
   color: #fff;
   margin-bottom: 0;
   padding: 80px 0 50px;
 }
-body>div.container>section#bottomSection>article>div.left {
+#bottomSection article div.left {
   width: 80%;
 }
 /*
@@ -288,10 +302,10 @@ footer p {
     width: 100%;
   }
   /*
-  body>div.container>header>div.logSign {
+  .container .logSign {
     width: 100%;
   }
-  body>div.container>header>div.logSign>button {
+  .container .logSign button {
     display: block;
     width: 100%;
   }
@@ -342,16 +356,16 @@ footer p {
   /*
     header begins here
   */
-  body>div.container>header>div.logSign {
-    width: 80%;
+  .logSign {
     display: flex;
+    justify-content: flex-end;
   }
-  body>div.container>header>div.logSign>button:first-child {
+  .logSign button:first-child {
     margin-bottom: 0;
     margin-right: .5em;
   }
 
-  body>div.container>section#topSection>article#skilledArtisan>div.left>button {
+  #topSection #skilledArtisan .left button {
     width: 60%;
   }
 
@@ -402,19 +416,16 @@ footer p {
   /*
     header begins here
   */
-  body>div.container>header {
-    margin-left: 10%;
-  }
-  body>div.container>header>div.logSign {
-    width: 70%;
-    display: flex;
+  .container .logSign {
+    flex-basis: 100%;
+
   }
 
   /*
     section begins here
   */
   /* All articles */
-  body>div.container>section>article {
+  section article {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -423,33 +434,39 @@ footer p {
     padding: 0;
   }
 
-  body>div.container>section#topSection>article#skilledArtisan {
+  #topSection #skilledArtisan {
     justify-content: space-around;
   }
-  body>div.container>section#topSection>article#skilledArtisan>div.left {
+  #topSection #skilledArtisan div.left {
     margin-bottom: 0;
     -ms-align-self: center;
     align-self: center;
   }
 
-  body>div.container>section#topSection>article>div.left {
+  #topSection article div.left {
     width: 50%;
     padding: 1.5em;
   }
-  body>div.container>section#topSection>article#linkAction {
+  #topSection #linkAction {
   justify-content: center;
   }
-  body>div.container>section#topSection>article#linkAction>div.left {
+  #topSection #linkAction div.left {
     -ms-align-self: flex-end;
     align-self: flex-end;
     margin-bottom: .5em;
   }
-  body>div.container>section#topSection>article#skilledArtisan>div.left>button {
-    width: 80%;
+  #topSection #skilledArtisan .left button {
+    width: 90%;
+  }
+  #topSection #skilledArtisan .left button>a {
+    padding: 12px 20px;
+  }
+  #topSection #skilledArtisan .left button>a:hover {
+    padding: 11px 19px;
   }
 
   /* topSection images */
-  body>div.container>section#topSection>article#skilledArtisan>img {
+  #topSection #skilledArtisan img {
     width: 40%;
     height: auto;
     max-width: 200px;
@@ -458,7 +475,7 @@ footer p {
     align-self: center;
 
   }
-  body>div.container>section#topSection>article#linkAction>img {
+  #topSection #linkAction img {
     width: 50%;
     height: auto;
     max-width: 300px;
@@ -470,10 +487,10 @@ footer p {
 
 
   /* middle and bottom section */
-  body>div.container>section#middleSection>article>img, body>div.container>section#bottomSection>article>img {
+  #middleSection article>img, #bottomSection article img {
   width: 15%;
   }
-  body>div.container>section#middleSection>article>div.left, body>div.container>section#bottomSection>article>div.left {
+  #middleSection article>div.left, #bottomSection article>div.left {
     width: 50%;
   }
   /*
@@ -528,42 +545,43 @@ footer p {
   }
 
 
-  body>div.container>header>nav.topNav>i {
+  header nav i {
     display: none;
   }
-  body>div.container>header>nav.topNav>ul.navBar {
+  .container header nav .navBar {
     top:0;
     width: auto;
   }
-  body>div.container>header>nav.topNav:hover>ul.navBar {
+  header nav:hover ul.navBar {
     width: auto;
   }
-  body>div.container>header>nav.topNav>ul.navBar>li {
+  header nav .navBar>li {
     display: inline-block;
   }
-  body>div.container>header>nav.topNav>ul.navBar>li:hover {
+  header nav .navBar li:hover {
     line-height: 39px;
     height: 39px;
   }
-  body>div.container>header>nav.topNav>ul.navBar>li>a {
+  header nav .navBar li a {
     background-color: #ffffff;
     border: 0;
     padding: 0 5.5px;
   }
 
-  body>div.container>header>div.logSign {
+  .logSign {
     display: flex;
   }
-  body>div.container>header>div.logSign>button {
+  .logSign button {
     width: 50%;
     border-radius: 2em;
   }
-  body>div.container>header>div.logSign>button:first-child {
+  .logSign button:first-child {
     width: 38%;
-    background-color: red;
   }
-
-  body>div.container>section#middleSection>article>img, body>div.container>section#bottomSection>article>img  {
+  #topSection #skilledArtisan .left button {
+    width: 80%;
+  }
+  #middleSection article img, #bottomSection article img  {
     width: 10%;
   }
 
@@ -613,24 +631,24 @@ footer p {
     width: 100%;
   }
 
-  body>div.container>header>nav.topNav>ul.navBar {
+  header nav .navBar {
     right: 23%;
   }
-  body>div.container>header>div.logSign {
+  .logSign {
     top: 0;
     width: 22%;
   }
   /*
     section begins here
   */
-  body>div.container>section#topSection>article#skilledArtisan>img {
+  #topSection #skilledArtisan img {
     width: 28%;
   }
-  body>div.container>section#topSection>article#skilledArtisan>div.left>button {
-    width: 50%;
+  #topSection #skilledArtisan .left button {
+    width: 55%;
   }
 
-  body>div.container>section#middleSection>article>img, body>div.container>section#bottomSection>article>img {
+  #middleSection article>img, #bottomSection article img {
     width: 8%;
   }
 
