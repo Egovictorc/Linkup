@@ -21,14 +21,14 @@ body {
 .oval {
   border-radius: 55%;
   width: 180px;
-  height: 100px;
+  height: 110px;
   background-color: dodgerblue;
-  transform: rotate(-120deg);
-  -ms-transform: rotate(-120deg);
-  -webkit-transform: rotate(-120deg);
+  transform: rotate(-110deg);
+  -ms-transform: rotate(-110deg);
+  -webkit-transform: rotate(-110deg);
   position: absolute;
-  top: -70px;
-  left: -90px;
+  top: -115px;
+  left: -130px;
 }
 .container>header {
   background-image: url("../asset/brokenLink@2x.png");
@@ -99,21 +99,13 @@ header nav .navBar>li>a:hover {
 }
 .logSign {
   flex-basis: 100%;
-  background-color: orange;
-  /*
-  position: absolute;
-  right: 0;
-  top: 45px;
-  width: 100%;
-  */
 }
 .logSign button {
   border: none;
   display: block;
   width: 100%;
   border-radius: 2em;
-  /* background-color: inherit; */
-  background-color: red;
+  background-color: inherit;
 }
 .logSign button:first-child {
   margin-bottom: .35em;
@@ -207,6 +199,21 @@ section>article:not(#bestArtisans){
   max-height: 200px;
 }
 
+    /*
+        shape
+    */
+.oval2 {
+   border-radius: 55%;
+   width: 120px;
+   height: 80px;
+   background-color: rgb(229, 49, 103);
+   transform: rotate(120deg);
+   -ms-transform: rotate(120deg);
+   -webkit-transform: rotate(120deg);
+   position: relative;
+   top: -50px;
+   left: -95px;
+}
   /* linkAction */
 #topSection>#linkAction>.left {
     background-image: linear-gradient(to right, lightgray, #fff);
@@ -302,10 +309,10 @@ footer p {
     width: 100%;
   }
   /*
-  .container .logSign {
+  header .logSign {
     width: 100%;
   }
-  .container .logSign button {
+  header .logSign button {
     display: block;
     width: 100%;
   }
@@ -352,6 +359,14 @@ footer p {
   .col-xs-12 {
     width: 100%;
   }
+  /*
+      shape oval
+  */
+    .oval {
+      top: -85px;
+      left: -130px;
+    }
+
 
   /*
     header begins here
@@ -368,6 +383,14 @@ footer p {
   #topSection #skilledArtisan .left button {
     width: 60%;
   }
+  /*
+      shape Oval2
+  */
+  .oval2 {
+    top: -70px;
+    left: -90px;
+  }
+
 
 }
 
@@ -413,10 +436,18 @@ footer p {
     width: 100%;
   }
 
+/*
+    shape oval
+*/
+  .oval {
+    top: -80px;
+    left: -100px;
+  }
+
   /*
     header begins here
   */
-  .container .logSign {
+  header .logSign {
     flex-basis: 100%;
 
   }
@@ -447,6 +478,14 @@ footer p {
     width: 50%;
     padding: 1.5em;
   }
+  /*
+      shape Oval2
+  */
+  .oval2 {
+    top: -70px;
+    left: -70px;
+  }
+
   #topSection #linkAction {
   justify-content: center;
   }
@@ -544,7 +583,10 @@ footer p {
     width: 100%;
   }
 
-
+.oval {
+  top: -70px;
+  left: -90px;
+}
   header nav i {
     display: none;
   }
@@ -575,12 +617,15 @@ footer p {
     width: 50%;
     border-radius: 2em;
   }
-  .logSign button:first-child {
-    width: 38%;
-  }
+
   #topSection #skilledArtisan .left button {
     width: 80%;
   }
+  .oval2 {
+    top: -90px;
+    left: -60px;
+  }
+
   #middleSection article img, #bottomSection article img  {
     width: 10%;
   }
@@ -631,13 +676,29 @@ footer p {
     width: 100%;
   }
 
+
+.oval {
+    top: -60px;
+    left: -70px;
+  }
+  header nav>i, header nav>i.fas {
+    display: none;
+  }
   header nav .navBar {
     right: 23%;
   }
-  .logSign {
-    top: 0;
-    width: 22%;
+
+  header .logSign {
+    flex-basis: 100%;
   }
+  header .logSign button:first-child {
+      flex-basis: 15%;
+  }
+  header .logSign button {
+      flex-basis: 25%;
+  }
+
+
   /*
     section begins here
   */
@@ -647,9 +708,36 @@ footer p {
   #topSection #skilledArtisan .left button {
     width: 55%;
   }
-
+  /*
+      shape
+  */
+.oval2 {
+    top: -90px;
+    left: -60px;
+}
   #middleSection article>img, #bottomSection article img {
     width: 8%;
   }
+
+}
+
+@media only screen  and (min-width: 1200px) {
+/*
+    Extra large device
+*/
+    header nav {
+        position: absolute;
+        right: 24%;
+    }
+    header nav>ul.navBar {
+     position: relative;
+     margin-left: auto;
+    }
+    header .logSign {
+        flex-basis: 22%;
+    }
+    header .logSign button {
+        flex-basis: 60%;
+    }
 
 }
