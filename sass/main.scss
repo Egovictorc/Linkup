@@ -20,8 +20,8 @@ body{
 
     .oval {
         border-radius: 55%;
-        width: 0;
-        height: 0;
+        width: 180px;
+        height: 100px;
         background-color: dodgerblue;
         transform: rotate(-120deg);
         position: absolute;
@@ -49,51 +49,9 @@ header {
     h2 {
         color: rgb(52, 128, 227);
     }
-    nav {
-        display: flex;
-        flex-direction: column;
-
-        i {
-            align-self: flex-end;
-            padding: 12.5px;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        ul {
-            overflow: hidden;
-            position: absolute;
-            right: 0;
-            top: 41px;
-            transition: .5s ease;
-            width: 0;
-            z-index: 1;
-        }
-
-        &:hover ul {
-            width: 100%;
-        }
-        li {
-            list-style-type: none;
-            line-height: 41px;
-            height: 41px;
-
-            a {
-                background-color: rgba(229, 49, 103, .9);
-                color: #000;
-                display: block;
-                text-align: center;
-                text-decoration: none;
-                border-top: 1px solid #fff;
-            }
-            a:hover {
-                background-color: #fff;
-                color: rgba(229, 49, 103, .9);
-            }
-        }
-    }
-  .logSign {
+    @import 'nav';
+}
+    .logSign {
     position: absolute;
     right: 0;
     top: 45px;
@@ -118,7 +76,7 @@ header {
                 text-decoration: none;
                 font-size: 1.25em;
 
-                #login {
+                &#login {
                     color: #000;
 
                     &:hover {
@@ -126,7 +84,7 @@ header {
                     }
                 }
 
-                #signup {
+                &#signup {
                     color: #fff;
                     background-color: rgb(229, 49, 103);
                     border: 1px solid #fff;
@@ -140,7 +98,7 @@ header {
             }
         }
     }
-}
+
     /*
     Section element begins here
       General styles first
@@ -481,7 +439,7 @@ footer {
 
         }
 
-        #topSection {
+        &#topSection {
             article {
                 div.left {
                     width: 50%;
