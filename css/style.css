@@ -30,7 +30,7 @@ body {
   top: -115px;
   left: -130px;
 }
-.container>header {
+header {
   background-image: url("../asset/brokenLink@2x.png");
   background-position: 0 50%;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@ body {
   line-height: 41px;
   height: 41px;
 }
-.container>header>h2 {
+header>h2 {
   color: rgb(52, 128, 227);
 }
 header nav {
@@ -68,7 +68,7 @@ header nav>i {
   top: 0;
   */
 }
-header nav>ul.navBar {
+header nav>ul {
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -77,15 +77,15 @@ header nav>ul.navBar {
   width: 0;
   z-index: 1;
 }
-header nav:hover>ul.navBar {
+header nav:hover>ul {
   width: 100%;
 }
-header nav .navBar>li {
+header nav li {
   list-style-type: none;
   line-height: 41px;
   height: 41px;
 }
-header nav .navBar>li>a {
+header nav li>a {
   background-color: rgba(229, 49, 103, .9);
   color: #000;
   display: block;
@@ -93,7 +93,7 @@ header nav .navBar>li>a {
   text-decoration: none;
   border-top: 1px solid #fff;
 }
-header nav .navBar>li>a:hover {
+header nav li>a:hover {
   background-color: #fff;
   color: rgba(229, 49, 103, .9);
 }
@@ -146,7 +146,7 @@ header nav .navBar>li>a:hover {
 section {
     margin: 110px auto 0;
 }
-section>article {
+article {
   margin: auto;
   display: -webkit-flex;
   display: -ms-flex;
@@ -156,27 +156,27 @@ section>article {
   padding: 0 4.165%;
 
 }
-section>article:not(#bestArtisans){
+article:not(#bestArtisans){
   margin-bottom: 3em;
 }
-#topSection>article>.left {
+#topSection .left {
   width: 80%;
 }
-#topSection>#skilledArtisan>.left {
+#skilledArtisan>.left {
   margin-bottom: 1.5em;
 }
-#topSection>#skilledArtisan>.left>p:first-child {
+#skilledArtisan p:first-child {
   font-size: 1.5em;
   margin-bottom: .5em;
 }
-#topSection>#skilledArtisan>.left>button {
+#skilledArtisan button {
   border: 0;
   border-radius: 1.75em;
   margin-top: 2em;
   width: 90%;
 }
 
-#topSection>#skilledArtisan>.left>button>a {
+#skilledArtisan button>a {
   background-color: rgb(229, 49, 103);
   border-radius: 1.75em;
   color: #fff;
@@ -186,13 +186,13 @@ section>article:not(#bestArtisans){
   font-size: 1.25em;
 }
 
-#topSection>#skilledArtisan>.left>button>a:hover {
+#skilledArtisan button>a:hover {
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
   padding: 11px 24px;
 }
-#topSection>#skilledArtisan>img{
+#skilledArtisan img{
   width: 50%;
   height: auto;
   max-width: 160px;
@@ -215,19 +215,19 @@ section>article:not(#bestArtisans){
    left: -95px;
 }
   /* linkAction */
-#topSection>#linkAction>.left {
+#linkAction>.left {
     background-image: linear-gradient(to right, lightgray, #fff);
     padding: 1.5em;
 
 }
-#topSection>#linkAction>.left>h2,
-#topSection>#linkAction>.left>p {
+#linkAction h2,
+#linkAction p {
     margin-bottom: .5em;
 }
-#topSection>#linkAction>.left>p:last-child {
+#linkAction p:last-child {
     margin-bottom: 1.5em;
 }
-#topSection>#linkAction>img {
+#linkAction img {
   width: 80%;
   height: auto;
   max-width: 250px;
@@ -237,21 +237,19 @@ section>article:not(#bestArtisans){
   /* style for middleSection  (General styles first)*/
 
 
-#middleSection>header {
+#middleSection h2 {
   text-align: center;
   margin-bottom: 1.5em;
 }
 
-#middleSection>article>div.left {
+#middleSection div.left {
   width: 80%;
 }
-#middleSection>article>div>h3,
-#bottomSection>article>div>h3 {
+section:not(.topSection) h3 {
   margin-bottom: .5em;
 }
 
-#middleSection>article>div>p,
-body>div.container>section#bottomSection>article>div>p {
+Section:not(.topSection) p{
   margin-bottom: 1.5em;
 }
 
@@ -259,7 +257,7 @@ body>div.container>section#bottomSection>article>div>p {
 /*
   style for all middleSection images below
 */
-#middleSection>article>img, #bottomSection>article>img {
+section:not(.topSection) img {
   width: 20%;
   height: auto;
 }
@@ -273,7 +271,7 @@ body>div.container>section#bottomSection>article>div>p {
   margin-bottom: 0;
   padding: 80px 0 50px;
 }
-#bottomSection article div.left {
+#bottomSection .left {
   width: 80%;
 }
 /*
@@ -380,7 +378,7 @@ footer p {
     margin-right: .5em;
   }
 
-  #topSection #skilledArtisan .left button {
+  #skilledArtisan button {
     width: 60%;
   }
   /*
@@ -456,7 +454,7 @@ footer p {
     section begins here
   */
   /* All articles */
-  section article {
+  article {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -465,16 +463,16 @@ footer p {
     padding: 0;
   }
 
-  #topSection #skilledArtisan {
+  #skilledArtisan {
     justify-content: space-around;
   }
-  #topSection #skilledArtisan div.left {
+  #skilledArtisan .left {
     margin-bottom: 0;
     -ms-align-self: center;
     align-self: center;
   }
 
-  #topSection article div.left {
+  #topSection .left {
     width: 50%;
     padding: 1.5em;
   }
@@ -486,26 +484,26 @@ footer p {
     left: -70px;
   }
 
-  #topSection #linkAction {
+  #linkAction {
   justify-content: center;
   }
-  #topSection #linkAction div.left {
+  #linkAction .left {
     -ms-align-self: flex-end;
     align-self: flex-end;
     margin-bottom: .5em;
   }
-  #topSection #skilledArtisan .left button {
+  #skilledArtisan button {
     width: 90%;
   }
-  #topSection #skilledArtisan .left button>a {
+  #skilledArtisan button>a {
     padding: 12px 20px;
   }
-  #topSection #skilledArtisan .left button>a:hover {
+  #skilledArtisan button>a:hover {
     padding: 11px 19px;
   }
 
   /* topSection images */
-  #topSection #skilledArtisan img {
+  #skilledArtisan img {
     width: 40%;
     height: auto;
     max-width: 200px;
@@ -514,7 +512,7 @@ footer p {
     align-self: center;
 
   }
-  #topSection #linkAction img {
+  #linkAction img {
     width: 50%;
     height: auto;
     max-width: 300px;
@@ -526,16 +524,16 @@ footer p {
 
 
   /* middle and bottom section */
-  #middleSection article>img, #bottomSection article img {
+  section:not(.topSection) img{
   width: 15%;
   }
-  #middleSection article>div.left, #bottomSection article>div.left {
+  section:not(.topSection) .left {
     width: 50%;
   }
   /*
     position #getQuote quotediv to the right
   */
-#getQuote #quotediv {
+article #quotediv {
   order: 1;
 }
 
@@ -590,21 +588,21 @@ footer p {
   header nav i {
     display: none;
   }
-  .container header nav .navBar {
+  header nav .navBar {
     top:0;
     width: auto;
   }
-  header nav:hover ul.navBar {
+  header nav:hover ul {
     width: auto;
   }
-  header nav .navBar>li {
+  header nav li {
     display: inline-block;
   }
-  header nav .navBar li:hover {
+  header nav  li:hover {
     line-height: 39px;
     height: 39px;
   }
-  header nav .navBar li a {
+  header nav li a {
     background-color: #ffffff;
     border: 0;
     padding: 0 5.5px;
@@ -618,7 +616,7 @@ footer p {
     border-radius: 2em;
   }
 
-  #topSection #skilledArtisan .left button {
+  #skilledArtisan  button {
     width: 80%;
   }
   .oval2 {
@@ -626,7 +624,7 @@ footer p {
     left: -60px;
   }
 
-  #middleSection article img, #bottomSection article img  {
+  section:not(.topSection) img  {
     width: 10%;
   }
 
@@ -688,13 +686,13 @@ footer p {
     right: 23%;
   }
 
-  header .logSign {
+  .logSign {
     flex-basis: 100%;
   }
-  header .logSign button:first-child {
+  .logSign button:first-child {
       flex-basis: 15%;
   }
-  header .logSign button {
+  .logSign button {
       flex-basis: 25%;
   }
 
@@ -702,10 +700,10 @@ footer p {
   /*
     section begins here
   */
-  #topSection #skilledArtisan img {
+  #skilledArtisan img {
     width: 28%;
   }
-  #topSection #skilledArtisan .left button {
+  #skilledArtisan button {
     width: 55%;
   }
   /*
@@ -715,7 +713,7 @@ footer p {
     top: -90px;
     left: -60px;
 }
-  #middleSection article>img, #bottomSection article img {
+  section:not(.topSection) img {
     width: 8%;
   }
 
