@@ -260,6 +260,7 @@ Section:not(.topSection) p{
 section:not(.topSection) img {
   width: 20%;
   height: auto;
+  
 }
 
 /*
@@ -298,7 +299,7 @@ footer p {
 
 
 /* media query begins here
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 400px)
 */
   /*
     Extreme small mobile device
@@ -306,17 +307,6 @@ footer p {
   [class*= col-] {
     width: 100%;
   }
-  /*
-  header .logSign {
-    width: 100%;
-  }
-  header .logSign button {
-    display: block;
-    width: 100%;
-  }
-
-*/
-
 
 
 @media only screen and (min-width: 401px) {
@@ -460,6 +450,7 @@ footer p {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     padding: 0;
   }
 
@@ -526,6 +517,7 @@ footer p {
   /* middle and bottom section */
   section:not(.topSection) img{
   width: 15%;
+  
   }
   section:not(.topSection) .left {
     width: 50%;
