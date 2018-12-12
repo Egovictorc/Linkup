@@ -15,7 +15,7 @@
 body {
   width: 100%;
 }
-.container {
+#container {
   padding-top: .5em;
 }
 .oval {
@@ -52,14 +52,14 @@ header {
   line-height: 41px;
   height: 41px;
 }
-header>h2 {
+h1 {
   color: rgb(52, 128, 227);
 }
-header nav {
+#headerNav {
   display: flex;
   flex-direction: column;
 }
-header nav>i {
+#headerNav>i {
   align-self: flex-end;
   padding: 12.5px;
   /*
@@ -68,7 +68,7 @@ header nav>i {
   top: 0;
   */
 }
-header nav>ul {
+#headerNav ul {
   overflow: hidden;
   position: absolute;
   right: 0;
@@ -77,15 +77,15 @@ header nav>ul {
   width: 0;
   z-index: 1;
 }
-header nav:hover>ul {
+#headerNav:hover>ul {
   width: 100%;
 }
-header nav li {
+#headerNav li {
   list-style-type: none;
   line-height: 41px;
   height: 41px;
 }
-header nav li>a {
+#headerNav li>a {
   background-color: rgba(229, 49, 103, .9);
   color: #000;
   display: block;
@@ -93,24 +93,24 @@ header nav li>a {
   text-decoration: none;
   border-top: 1px solid #fff;
 }
-header nav li>a:hover {
+#headerNav li>a:hover {
   background-color: #fff;
   color: rgba(229, 49, 103, .9);
 }
-.logSign {
+#logSign {
   flex-basis: 100%;
 }
-.logSign button {
+#logSign button {
   border: none;
   display: block;
   width: 100%;
   border-radius: 2em;
   background-color: inherit;
 }
-.logSign button:first-child {
+#logSign button:first-child {
   margin-bottom: .35em;
 }
-.logSign button>a {
+#logSign button>a {
   align-self: flex-start;
   border: none;
   display: block;
@@ -119,20 +119,20 @@ header nav li>a:hover {
   text-decoration: none;
   font-size: 1.25em;
 }
-.logSign button>a#login{
+#logSign button>a#login{
   color: #000;
 
 }
-.logSign button>a#login:hover {
+#logSign button>a#login:hover {
   color: rgb(229, 49, 103);
 
 }
-.logSign button>a#signup {
+#logSign button>a#signup {
   color: #fff;
   background-color: rgb(229, 49, 103);
   border: 1px solid #fff;
 }
-.logSign button>a#signup:hover{
+#logSign button>a#signup:hover{
   color: rgb(229, 49, 103);
   background-color: #fff;
   border: 1px solid rgb(229, 49, 103);
@@ -359,11 +359,11 @@ footer p {
   /*
     header begins here
   */
-  .logSign {
+  #logSign {
     display: flex;
     justify-content: flex-end;
   }
-  .logSign button:first-child {
+  #logSign button:first-child {
     margin-bottom: 0;
     margin-right: .5em;
   }
@@ -435,7 +435,7 @@ footer p {
   /*
     header begins here
   */
-  header .logSign {
+  header #logSign {
     flex-basis: 100%;
 
   }
@@ -577,33 +577,33 @@ article #quotediv {
   top: -70px;
   left: -90px;
 }
-  header nav i {
+  #headerNav i {
     display: none;
   }
-  header nav .navBar {
+  #headerNav .navBar {
     top:0;
     width: auto;
   }
-  header nav:hover ul {
+  #headerNav:hover ul {
     width: auto;
   }
-  header nav li {
+  #headerNav li {
     display: inline-block;
   }
-  header nav  li:hover {
+  #headerNav  li:hover {
     line-height: 39px;
     height: 39px;
   }
-  header nav li a {
+  #headerNav li a {
     background-color: #ffffff;
     border: 0;
     padding: 0 5.5px;
   }
 
-  .logSign {
+  #logSign {
     display: flex;
   }
-  .logSign button {
+  #logSign button {
     width: 50%;
     border-radius: 2em;
   }
@@ -671,20 +671,20 @@ article #quotediv {
     top: -60px;
     left: -70px;
   }
-  header nav>i, header nav>i.fas {
+  #headerNav>i, #headerNav>i.fas {
     display: none;
   }
-  header nav .navBar {
+  #headerNav .navBar {
     right: 23%;
   }
 
-  .logSign {
+  #logSign {
     flex-basis: 100%;
   }
-  .logSign button:first-child {
+  #logSign button:first-child {
       flex-basis: 15%;
   }
-  .logSign button {
+  #logSign button {
       flex-basis: 25%;
   }
 
@@ -692,6 +692,7 @@ article #quotediv {
   /*
     section begins here
   */
+  
   #skilledArtisan img {
     width: 28%;
   }
@@ -715,18 +716,18 @@ article #quotediv {
 /*
     Extra large device
 */
-    header nav {
+    #headerNav {
         position: absolute;
         right: 24%;
     }
-    header nav>ul.navBar {
+    header ul.navBar {
      position: relative;
      margin-left: auto;
     }
-    header .logSign {
+    header #logSign {
         flex-basis: 22%;
     }
-    header .logSign button {
+    header #logSign button {
         flex-basis: 60%;
     }
 
