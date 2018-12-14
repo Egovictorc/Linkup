@@ -1,0 +1,92 @@
+
+#headerNav {
+  display: flex;
+  flex-direction: column;
+  font: {
+    family: lato, sans-serif;
+    weight: bold;
+    size: 36px;
+  }
+  i {
+  align-self: flex-end;
+  padding: 12.5px;
+  }
+  #navBar & {
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 41px;
+  transition: 0.5s ease;
+  width: 0;
+  z-index: 1;
+  }
+}
+$age: 13yrs;
+
+%middleSection img {
+  width: 100px;
+  height: 80px;
+  max-width: $age;
+}
+#topSection {
+
+  color: rgb(0, 0, 0);
+  @extend %middleSection;
+}
+#middleSection {
+  .head {
+    @at-root h2 {
+      text-align: center;
+      margin-bottom: 1.5em;
+    }
+} }
+
+//my comment
+/*
+* my comment */
+p {
+  @if 1 + 1 == 2 {
+    border: 1px  green solid;
+  }
+  @if 5 < 3 {
+    border: 2px  red dotted;
+  }
+}
+
+@each $bg, $height, $width in
+  (#topSection),
+  (#middleSection),
+  (#headerNav) {
+  #{$bg} {
+    color: red;
+    border: $height solid 1px;
+  }
+}
+@each $var in #middleSection img, #bottomSection img {
+  #{$var} {
+    width: 15%;
+  }
+}
+$var: 6;
+@while $var > 0 {
+  .item-#{$var} {
+    width: 18%;
+  }
+  $var: $var - 2;
+}
+$box-shadow: 1px 3px 2px blue, 1px 2px 6px red;
+@mixin shadow($args...) {
+  box-shadow: $args;
+}
+#topSection {
+  @include shadow($box-shadow);
+}
+
+$gutter-width: 10;
+$grid-width: 3;
+@function grid-width ($sn: 10) {
+  @return   $sn * $grid-width + ($sn - 1) *$gutter-width;
+}
+#sidebar {
+  width: grid-width(15)+px;
+}
