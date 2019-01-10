@@ -10,4 +10,4 @@ css/all.min.css
 css/fontawesome.css
 revealjs/
 js/
-*prepros-6.config
+*.config
