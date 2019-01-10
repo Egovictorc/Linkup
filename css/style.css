@@ -1,734 +1,134 @@
-/*
-  Readme !important
-  LinkUp stylesheet
-  responsive mobile first design
-  General style is placed at the top of each section
-*/
-
-*{
+* {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  /* font-family: 'Open Sans', sans-serif; */
-  font-family: 'Source Sans Pro', sans-serif;
-}
+  padding: 0; }
+
+:root {
+  --color-black: #000;
+  --color-primary: #eb2f64;
+  --color-primary-light: #FF3366;
+  --color-primary-dark: #BA265D;
+  --color-secondary: rgb(52, 128, 227);
+  --color-white: #fff;
+  --color-overlay: rgba(0, 0, 0, .9);
+  --font-link: 1.6rem;
+  --gradient-bg: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
+  --padding-link: 2rem 1.75rem; }
+
+html {
+  font-size: 62.5%; }
+
 body {
-  width: 100%;
-}
-#container {
-  padding-top: .5em;
-}
-.oval {
-  border-radius: 55%;
-  width: 180px;
-  height: 110px;
-  background-color: dodgerblue;
-  transform: rotate(-110deg);
-  -ms-transform: rotate(-110deg);
-  -webkit-transform: rotate(-110deg);
-  position: absolute;
-  top: -115px;
-  left: -130px;
-}
-header {
-  background-image: url("../asset/brokenLink@2x.png");
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  -webkit-background-size: 2.5em;
-  background-size: 1.75em;
-  padding-left: 2.5em;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  margin-left: auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff; }
+
+.heading-primary {
+  font-size: 3.6rem;
+  color: var(--color-secondary); }
+
+.logo {
   margin-right: auto;
-  line-height: 41px;
-  height: 41px;
-}
-h1 {
-  color: rgb(52, 128, 227);
-}
-#headerNav {
-  display: flex;
-  flex-direction: column;
-}
-#headerNav>i {
-  align-self: flex-end;
-  padding: 12.5px;
-  /*
+  display: flex; }
+  .logo__img {
+    height: 4.3rem;
+    width: auto; }
+  .logo__text {
+    height: 4.3rem; }
+
+.nav:hover .nav__list {
+  width: 100%; }
+
+.nav__menu {
+  height: 4.3rem;
+  width: 4.3rem;
+  fill: var(--color-white); }
+
+.nav__list {
+  list-style: none;
   position: absolute;
+  top: 55%;
   right: 0;
-  top: 0;
-  */
-}
-#headerNav ul {
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 41px;
-  transition: .5s ease;
   width: 0;
-  z-index: 1;
-}
-#headerNav:hover>ul {
-  width: 100%;
-}
-#headerNav li {
-  list-style-type: none;
-  line-height: 41px;
-  height: 41px;
-}
-#headerNav li>a {
-  background-color: rgba(229, 49, 103, .9);
-  color: #000;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  border-top: 1px solid #fff;
-}
-#headerNav li>a:hover {
-  background-color: #fff;
-  color: rgba(229, 49, 103, .9);
-}
-#logSign {
-  flex-basis: 100%;
-}
-#logSign button {
-  border: none;
-  display: block;
-  width: 100%;
-  border-radius: 2em;
-  background-color: inherit;
-}
-#logSign button:first-child {
-  margin-bottom: .35em;
-}
-#logSign button>a {
-  align-self: flex-start;
-  border: none;
-  display: block;
-  padding: 9px 20px;
-  border-radius: 2em;
-  text-decoration: none;
-  font-size: 1.25em;
-}
-#logSign button>a#login{
-  color: #000;
-
-}
-#logSign button>a#login:hover {
-  color: rgb(229, 49, 103);
-
-}
-#logSign button>a#signup {
-  color: #fff;
-  background-color: rgb(229, 49, 103);
-  border: 1px solid #fff;
-}
-#logSign button>a#signup:hover{
-  color: rgb(229, 49, 103);
-  background-color: #fff;
-  border: 1px solid rgb(229, 49, 103);
-}
-
-
-  /*topSection element begins here
-    General styles first
-  */
-
-section {
-    margin: 110px auto 0;
-}
-article {
-  margin: auto;
-  display: -webkit-flex;
-  display: -ms-flex;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0 4.165%;
+  justify-content: center;
+  align-content: center;
+  white-space: nowrap;
+  transition: all 0.5s cubic-bezier(1, 0, 0, 1); }
 
-}
-article:not(#bestArtisans){
-  margin-bottom: 3em;
-}
-#topSection .left {
-  width: 80%;
-}
-#skilledArtisan>.left {
-  margin-bottom: 1.5em;
-}
-#skilledArtisan p:first-child {
-  font-size: 1.5em;
-  margin-bottom: .5em;
-}
-#skilledArtisan button {
-  border: 0;
-  border-radius: 1.75em;
-  margin-top: 2em;
-  width: 90%;
-}
+.nav__item {
+  text-align: center;
+  position: relative;
+  background-color: var(--color-overlay); }
+  .nav__item:not(:last-child) {
+    margin-bottom: 3px; }
+  .nav__item::before {
+    content: " ";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: linear-gradient(105deg, var(--color-primary) 70%, var(--color-overlay) 70%);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s; }
+  .nav__item:hover::before {
+    transform: scaleY(1);
+    width: 100%; }
 
-#skilledArtisan button>a {
-  background-color: rgb(229, 49, 103);
-  border-radius: 1.75em;
-  color: #fff;
+.nav__link:link, .nav__link:visited {
   text-decoration: none;
+  color: var(--color-white);
   display: block;
-  padding: 12px 25px;
-  font-size: 1.25em;
-}
+  font-size: var(--font-link);
+  padding: var(--padding-link);
+  position: relative;
+  z-index: 10; }
 
-#skilledArtisan button>a:hover {
-  color: rgb(229, 49, 103);
-  background-color: #fff;
-  border: 1px solid rgb(229, 49, 103);
-  padding: 11px 24px;
-}
-#skilledArtisan img{
-  width: 50%;
-  height: auto;
-  max-width: 160px;
-  max-height: 200px;
-}
+.btn {
+  background-color: transparent;
+  color: var(--color-white);
+  border: none;
+  border-radius: 10rem;
+  overflow: hidden;
+  transition: .2s ease; }
+  .btn--bg {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.5); }
+    .btn--bg:hover {
+      background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary)); }
+  .btn:active {
+    transform: translateY(-3px); }
+  .btn__link {
+    text-decoration: none;
+    color: currentColor;
+    font-size: var(--font-link);
+    display: block; }
+    .btn__link--padding {
+      padding: var(--padding-link); }
 
-    /*
-        shape
-    */
-.oval2 {
-   border-radius: 55%;
-   width: 120px;
-   height: 80px;
-   background-color: rgb(229, 49, 103);
-   transform: rotate(120deg);
-   -ms-transform: rotate(120deg);
-   -webkit-transform: rotate(120deg);
-   position: relative;
-   top: -50px;
-   left: -95px;
-}
-  /* linkAction */
-#linkAction>.left {
-    background-image: linear-gradient(to right, lightgray, #fff);
-    padding: 1.5em;
-
-}
-#linkAction h2,
-#linkAction p {
-    margin-bottom: .5em;
-}
-#linkAction p:last-child {
-    margin-bottom: 1.5em;
-}
-#linkAction img {
-  width: 80%;
-  height: auto;
-  max-width: 250px;
-  max-height: 250px;
-}
-
-  /* style for middleSection  (General styles first)*/
-
-
-#middleSection h2 {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
-#middleSection div.left {
-  width: 80%;
-}
-section:not(.topSection) h3 {
-  margin-bottom: .5em;
-}
-
-Section:not(.topSection) p{
-  margin-bottom: 1.5em;
-}
-
-
-/*
-  style for all middleSection images below
-*/
-section:not(.topSection) img {
-  width: 20%;
-  height: auto;
-  
-}
-
-/*
-  bottomSection
-*/
-#bottomSection {
-  background-color: rgb(40, 176, 242);
-  color: #fff;
-  margin-bottom: 0;
-  padding: 80px 0 50px;
-}
-#bottomSection .left {
-  width: 80%;
-}
-/*
-  footer begins here
-*/
-footer {
-  background-color: lightgray;
-  text-align: center;
-  height: 50px;
-  display: -webkit-flex;
-  display: -ms-flex;
+.header {
+  max-width: 120em;
+  background-color: yellowgreen;
+  margin: 0 auto;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 1em;
-}
-footer p {
-  -ms-align-self: center;
-  align-self: center;
-}
-
-
-
-/* media query begins here
-@media only screen and (max-width: 400px)
-*/
-  /*
-    Extreme small mobile device
-  */
-  [class*= col-] {
-    width: 100%;
-  }
-
-
-@media only screen and (min-width: 401px) {
-  /* Extra small mobile device */
-  .col-xs-1 {
-    width: 8.33%;
-  }
-  .col-xs-2 {
-    width: 16.66%;
-  }
-  .col-xs-3 {
-    width: 25%;
-  }
-  .col-xs-4 {
-    width: 33.33%;
-  }
-  .col-xs-5 {
-    width: 41.66%;
-  }
-  .col-xs-6 {
-    width: 50%;
-  }
-  .col-xs-7 {
-    width: 58.33%;
-  }
-  .col-xs-8 {
-    width: 66.66%;
-  }
-  .col-xs-9 {
-    width: 75%;
-  }
-  .col-xs-10 {
-    width: 83.33%;
-  }
-  .col-xs-11 {
-    width: 91.66%;
-  }
-  .col-xs-12 {
-    width: 100%;
-  }
-  /*
-      shape oval
-  */
-    .oval {
-      top: -85px;
-      left: -130px;
-    }
-
-
-  /*
-    header begins here
-  */
-  #logSign {
+  flex-wrap: wrap;
+  position: relative; }
+  .header__btn-wrapper {
+    flex: 0 0 100%;
+    margin-top: 0.5rem;
     display: flex;
-    justify-content: flex-end;
-  }
-  #logSign button:first-child {
-    margin-bottom: 0;
-    margin-right: .5em;
-  }
+    justify-content: space-evenly; }
+  .header__btn:first-child {
+    flex: 0 0 auto; }
+  .header__btn:last-child {
+    flex: 0 0 40%; }
 
-  #skilledArtisan button {
-    width: 60%;
-  }
-  /*
-      shape Oval2
-  */
-  .oval2 {
-    top: -70px;
-    left: -90px;
-  }
+.main {
+  max-width: 120em; }
 
-
-}
-
-
-@media only screen and (min-width: 601px){
-  /*
-    small device {mobile phones}
-  */
-  .col-sm-1 {
-    width: 8.33%;
-  }
-  .col-sm-2 {
-    width: 16.66%;
-  }
-  .col-sm-3 {
-    width: 25%;
-  }
-  .col-sm-4 {
-    width: 33.33%;
-  }
-  .col-sm-5 {
-    width: 41.66%;
-  }
-  .col-sm-6 {
-    width: 50%;
-  }
-  .col-sm-7 {
-    width: 58.33%;
-  }
-  .col-sm-8 {
-    width: 66.66%;
-  }
-  .col-sm-9 {
-    width: 75%;
-  }
-  .col-sm-10 {
-    width: 83.33%;
-  }
-  .col-sm-11 {
-    width: 91.66%;
-  }
-  .col-sm-12 {
-    width: 100%;
-  }
-
-/*
-    shape oval
-*/
-  .oval {
-    top: -80px;
-    left: -100px;
-  }
-
-  /*
-    header begins here
-  */
-  header #logSign {
-    flex-basis: 100%;
-
-  }
-
-  /*
-    section begins here
-  */
-  /* All articles */
-  article {
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-  }
-
-  #skilledArtisan {
-    justify-content: space-around;
-  }
-  #skilledArtisan .left {
-    margin-bottom: 0;
-    -ms-align-self: center;
-    align-self: center;
-  }
-
-  #topSection .left {
-    width: 50%;
-    padding: 1.5em;
-  }
-  /*
-      shape Oval2
-  */
-  .oval2 {
-    top: -70px;
-    left: -70px;
-  }
-
-  #linkAction {
-  justify-content: center;
-  }
-  #linkAction .left {
-    -ms-align-self: flex-end;
-    align-self: flex-end;
-    margin-bottom: .5em;
-  }
-  #skilledArtisan button {
-    width: 90%;
-  }
-  #skilledArtisan button>a {
-    padding: 12px 20px;
-  }
-  #skilledArtisan button>a:hover {
-    padding: 11px 19px;
-  }
-
-  /* topSection images */
-  #skilledArtisan img {
-    width: 40%;
-    height: auto;
-    max-width: 200px;
-    max-height: 300px;
-    -ms-align-self: center;
-    align-self: center;
-
-  }
-  #linkAction img {
-    width: 50%;
-    height: auto;
-    max-width: 300px;
-    max-height: 300px;
-    -ms-align-self: center;
-    align-self: center;
-  }
-
-
-
-  /* middle and bottom section */
-  section:not(.topSection) img{
-  width: 15%;
-  
-  }
-  section:not(.topSection) .left {
-    width: 50%;
-  }
-  /*
-    position #getQuote quotediv to the right
-  */
-article #quotediv {
-  order: 1;
-}
-
-}
-
-
-@media only screen and (min-width: 769px) {
-  /*
-    Medium device, large screen mobile and portrait tablet
-  */
-  .col-md-1 {
-    width: 8.33%;
-  }
-  .col-md-2 {
-    width: 16.66%;
-  }
-  .col-md-3 {
-    width: 25%;
-  }
-  .col-md-4 {
-    width: 33.33%;
-  }
-  .col-md-5 {
-    width: 41.66%;
-  }
-  .col-md-6 {
-    width: 50%;
-  }
-  .col-md-7 {
-    width: 58.33%;
-  }
-  .col-md-8 {
-    width: 66.66%;
-  }
-  .col-md-9 {
-    width: 75%;
-  }
-  .col-md-10 {
-    width: 83.33%;
-  }
-  .col-md-11 {
-    width: 91.66%;
-  }
-  .col-md-12 {
-    width: 100%;
-  }
-
-.oval {
-  top: -70px;
-  left: -90px;
-}
-  #headerNav i {
-    display: none;
-  }
-  #headerNav .navBar {
-    top:0;
-    width: auto;
-  }
-  #headerNav:hover ul {
-    width: auto;
-  }
-  #headerNav li {
-    display: inline-block;
-  }
-  #headerNav  li:hover {
-    line-height: 39px;
-    height: 39px;
-  }
-  #headerNav li a {
-    background-color: #ffffff;
-    border: 0;
-    padding: 0 5.5px;
-  }
-
-  #logSign {
-    display: flex;
-  }
-  #logSign button {
-    width: 50%;
-    border-radius: 2em;
-  }
-
-  #skilledArtisan  button {
-    width: 80%;
-  }
-  .oval2 {
-    top: -90px;
-    left: -60px;
-  }
-
-  section:not(.topSection) img  {
-    width: 10%;
-  }
-
-
-}
-
-
-
-@media only screen  and (min-width: 993px) {
-  /*
-    large device landscape tablet and desktop
-  */
-  .col-lg-1 {
-    width: 8.33%;
-  }
-  .col-lg-2 {
-    width: 16.66%;
-  }
-  .col-lg-3 {
-    width: 25%;
-  }
-  .col-lg-4 {
-    width: 33.33%;
-  }
-  .col-lg-5 {
-    width: 41.66%;
-  }
-  .col-lg-6 {
-    width: 50%;
-  }
-  .col-lg-7 {
-    width: 58.33%;
-  }
-  .col-lg-8 {
-    width: 66.66%;
-  }
-  .col-lg-9 {
-    width: 75%;
-  }
-  .col-lg-10 {
-    width: 83.33%;
-  }
-  .col-lg-11 {
-    width: 91.66%;
-  }
-  .col-lg-12 {
-    width: 100%;
-  }
-
-
-.oval {
-    top: -60px;
-    left: -70px;
-  }
-  #headerNav>i, #headerNav>i.fas {
-    display: none;
-  }
-  #headerNav .navBar {
-    right: 23%;
-  }
-
-  #logSign {
-    flex-basis: 100%;
-  }
-  #logSign button:first-child {
-      flex-basis: 15%;
-  }
-  #logSign button {
-      flex-basis: 25%;
-  }
-
-
-  /*
-    section begins here
-  */
-  
-  #skilledArtisan img {
-    width: 28%;
-  }
-  #skilledArtisan button {
-    width: 55%;
-  }
-  /*
-      shape
-  */
-.oval2 {
-    top: -90px;
-    left: -60px;
-}
-  section:not(.topSection) img {
-    width: 8%;
-  }
-
-}
-
-@media only screen  and (min-width: 1200px) {
-/*
-    Extra large device
-*/
-    #headerNav {
-        position: absolute;
-        right: 24%;
-    }
-    header ul.navBar {
-     position: relative;
-     margin-left: auto;
-    }
-    header #logSign {
-        flex-basis: 22%;
-    }
-    header #logSign button {
-        flex-basis: 60%;
-    }
-
-}
+.row {
+  display: flex;
+  flex-direction: column; }

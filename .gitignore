@@ -10,3 +10,4 @@ css/all.min.css
 css/fontawesome.css
 revealjs/
 js/
+*.config
