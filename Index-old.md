@@ -1,0 +1,143 @@
+
+
+ <!--  Link up website-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ego Victor" />
+    <meta name="description" content="LinkUp Web Page" />
+    <meta name="keywords" content="LinkUp, Artisans, household issue">
+    <title> LinkUp </title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--
+        Awesome
+    -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <!--
+        Google
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Source+Sans+Pro:regular,bold" rel="stylesheet">
+
+    <link rel="icon" href="validate@2x.png" sizes="16x16" type="image/png">
+    <base href="asset/" target="_self">
+
+  </head>
+
+  <!--
+      body begins here
+  -->
+  <body>
+    <div class="container col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="oval"></div>
+
+      <!--
+        header begins here
+      -->
+      <header class="col-xs-11 col-sm-10 col-md-10 col-lg-10">
+        <h2> LinkUp </h2>
+        <nav class="headerNav">
+          <i class="navCollapse fas fa-bars"></i>
+          <ul class="navBar">
+            <li class="navItem"><a href="#">Request an artisan</a></li>
+            <li class="navItem"><a href="#">Refer an artisan</a></li>
+            <li class="navItem"><a href="#">Register as an artisan</a></li>
+            <li class="navItem"><a href="#">FAQ</a></li>
+          </ul>
+        </nav>
+        <div class="logSign">
+          <button><a href="" id="login">Login</a></button>
+          <button><a href="" id="signup">Sign up</a></button>
+        </div>
+
+    </header>
+
+      <!--
+          top section begins (topSection) here
+      -->
+      <section class="section col-xs-12 col-sm-12 col-md-12 col-lg-12" id="topSection">
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="skilledArtisan">
+          <div class="left">
+            <p>Request skilled artisan close to you</p>
+            <p>Never get stuck in any house hold issue again, easily connect with artisans close to you and live a stress free life</p>
+            <button> <a href="#">Request an artisan</a></button>
+          </div>
+          <img src="ussd@2x.png" alt="ussd" />
+        </article>
+
+        <!--
+            shape
+        -->
+        <div class="oval2"></div>
+
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="linkAction">
+          <div class="left">
+            <h2> LinkUp in Action </h2>
+            <p> Solve your house hold task easily with a click of a button by requesting skilled artisans in your neighbourhood </p>
+            <p> You can do this without the internet, just dial our <span class="span">span </span> code and request for the best artisan in your environs. its that simple</p>
+          </div>
+          <img class="icon" src="nopath@2x.png" alt="noPath" />
+        </article>
+      </section>
+      <!--
+        middleSection begins here
+      -->
+      <section class="section col-xs-12 col-sm-12 col-md-12 col-lg-12" id="middleSection">
+        <h2 class="sectionHeader col-xs-11 col-sm-11 col-md-11 col-lg-11">
+          How It Works
+        </h2>
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="requestArtisan">
+          <div class="left">
+            <h3>Request an Artisan</h3>
+            <p>Dial the <span class="ussd">ussd</span> code and request for an artisan close to you. We have made this process as easy as possible</p>
+          </div>
+          <img class="icon" src="contact@2x.png" alt="contact" />
+        </article>
+
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="getQuote">
+          <div id="quotediv" class="left">
+            <h3>Get a quote</h3>
+            <p>Our skilled artisans would give you a quote for the required job to be done, don't worry this price is standardised and regulated by us.</p>
+          </div>
+          <img class="icon" src="discount@2x.png" alt="discount" />
+        </article>
+
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="jobDone">
+          <div class="left">
+            <h3>Get your Job Done</h3>
+            <p>Our skilled artisans are adequately skilled to get the Job done 100% guaranteed</p>
+          </div>
+          <img class="icon" src="validate@2x.png" alt="validate" />
+        </article>
+      </section>
+
+      <!--
+        bottom section begins here
+      -->
+      <section id="bottomSection" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <article class="article col-xs-11 col-sm-10 col-md-11 col-lg-11" id="bestArtisans">
+          <div class="left">
+            <h3>We provide you with the best artisans around you</h3>
+            <p>With our rating system, we make sure you get only the best artisans to help you with your task. Remember to always leave a review.</p>
+          </div>
+          <img class="icon" src="review@2x.png" alt="review" />
+        </article>
+      </section>
+
+      <!--
+          footer begins here
+      -->
+      <footer>
+        <p>&copy; LinkUp 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
+  
+
+-->

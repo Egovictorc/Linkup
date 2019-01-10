@@ -1,0 +1,28 @@
+.header {
+    max-width: $bp-largest;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &__btn-wrapper {
+        flex: 0 0 100%;
+        margin-top: 0.5rem;
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__btn{
+
+        &:first-child {
+            flex: 0 0 auto;
+            //margin-right: 2rem;
+        }
+
+        &:last-child {
+            flex: 0 0 40%;
+        }
+    }
+}
