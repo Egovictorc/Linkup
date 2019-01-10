@@ -1,0 +1,26 @@
+.section-top{
+    .row {
+
+        .article {
+            &__linkup {
+                background-image: linear-gradient(to right, #c1c1c1, #fff);
+                margin-bottom: var(--gutter-vertical-sm);
+            }
+        }
+        .img-box {
+            background-color: red;
+            flex: 0 0 80%;
+            max-width: 90%;
+            margin: 0 auto;
+            //max-height: 300px;
+
+        }
+        &-img {
+            display: block;
+
+            //width: 100%;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}

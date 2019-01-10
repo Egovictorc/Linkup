@@ -101,11 +101,24 @@
     }
 }
 
-
 //////////////////////////////
 // ARTICLE
-
 .article {
+    margin: 0 auto;
+    background-color: green;
 
+    & > *:not(:last-child) {
+        margin-bottom: var(--gutter-vertical-sm);
+    }
+    &__header {
+        max-width: 70%;
+    }
 
+    &__paragraph {
+        font-size: 1.6rem;
+        line-height: 1.6;
+    }
+    &__btn {
+        width: 60%;
+    }
 }

@@ -1,10 +1,10 @@
 .header {
-    max-width: $bp-largest;
     background-color: yellowgreen;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin-bottom: var(--gutter-vertical);
 
     &__btn-wrapper {
         flex: 0 0 100%;

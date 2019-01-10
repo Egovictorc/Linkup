@@ -16,6 +16,7 @@ $bp-largest: 120em;
     --color-primary-dark: #BA265D;
 
     --color-secondary: rgb(52, 128, 227);
+    --color-tertiary: #c1c1c1;
     --color-white: #fff;
     --color-overlay: rgba(0, 0, 0, .9);
 
@@ -24,6 +25,11 @@ $bp-largest: 120em;
 
     //font-size
     --font-link: 1.6rem;
+
+    //Gutter
+    --gutter-vertical: 3rem;
+    --gutter-vertical-lg: 6rem;
+    --gutter-vertical-sm: 2rem;
 
     // Gradient
     --gradient-bg: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
@@ -41,6 +47,7 @@ html {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #fff;
+    padding: 1rem 1% 0;
     //font-weight: 400;
     //line-height: 1.6;
 }
