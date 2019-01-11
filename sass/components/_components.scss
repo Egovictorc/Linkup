@@ -1,8 +1,6 @@
 ////////////
 ///Logo
 .logo {
-    margin-right: auto;
-
     display: flex;
 
     &__img {
@@ -29,10 +27,6 @@
     @include respond-above(small-screen) {
         max-width: 80%;
     }
-    @include respond-above(medium-screen) {
-        max-width: 60%;
-        
-    }
 
     & > *:not(:last-child) {
         margin-bottom: var(--gutter-vertical-sm);
@@ -44,6 +38,10 @@
     &__paragraph {
         font-size: 1.6rem;
         line-height: 1.6;
+
+        @include respond-above(medium-screen) {
+        font-size: 1.8rem;
+        }
     }
     &__btn {
         width: 60%;

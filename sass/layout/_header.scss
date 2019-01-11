@@ -5,26 +5,77 @@
     flex-wrap: wrap;
     position: relative;
     margin-bottom: var(--gutter-vertical);
+    padding: 0 2%;
+    max-width: $bp-largest;
+
+    .logo {
+        margin-right: auto;
+        @include respond-above(large-screen) {
+
+        }
+    }
+
+    .nav {
+        @include respond-above(large-screen) {
+            margin-right: var(--gutter-horizontal-md);
+        }
+        &__btn {
+            @include respond-above(large-screen) {
+                display: none;
+            }
+        }
+
+        &__list {
+            @include respond-above(large-screen) {
+                flex-direction: row;
+                width: auto;
+                position: static;
+                opacity: 1;
+            }
+        }
+        &__item {
+            @include respond-above(large-screen) {
+                margin: 0;
+            }
+        }
+
+        &__link {
+            @include respond-above(large-screen) {
+            padding: var(--padding-link-md);
+            }
+        }
+    }
 
     &__btn-wrapper {
         flex: 0 0 100%;
         margin-top: 0.5rem;
-
         display: flex;
         justify-content: space-evenly;
+        @include respond-above(small-screen) {
+            flex: 0 0 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include respond-above(large-screen) {
+            flex: 0 0 auto;
+            margin: 0;
+        }
     }
 
-    &__btn{
-
+    &__btn {
         &:first-child {
             flex: 0 0 auto;
             //margin-right: 2rem;
+            @include respond-above(large-screen) {
+                margin-right: var(--gutter-horizontal-sm);
+            }
         }
 
         &:last-child {
             flex: 0 0 40%;
-
-
+            @include respond-above(large-screen) {
+                flex: 0 0 auto;
+            }
         }
     }
 }

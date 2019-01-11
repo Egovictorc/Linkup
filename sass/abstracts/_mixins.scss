@@ -4,8 +4,8 @@ $breakpoints: (
     xsmall-screen: 25em, //400px;
     small-screen: 37.5em, //600px;
     medium-screen: 48em, //768px;
-    large-screen: 25em, //400px;
-    xlarge-screen: 25em, //400px;
+    large-screen: 62em, //992px;
+    xlarge-screen: 75em, //1200px;
 );
 
 @mixin respond-above ($breakpoint) {

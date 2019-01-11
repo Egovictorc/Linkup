@@ -33,12 +33,14 @@ $bp-largest: 120em;
 
     --gutter-horizontal-xs: .2rem;
     --gutter-horizontal-sm: 2rem;
+    --gutter-horizontal-md: 5rem;
 
     // Gradient
     --gradient-bg: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
 
     //padding
-    --padding-link: 1.25rem 1.75rem;
+    --padding-link: 1.35rem 1.75rem;
+    --padding-link-md: 2rem 1.75rem;
 }
 
 ::selection {
@@ -52,7 +54,7 @@ html {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #fff;
-    padding: 1rem 2% 0;
+    padding-top: 2rem;
     //font-weight: 400;
     //line-height: 1.6;
 }
