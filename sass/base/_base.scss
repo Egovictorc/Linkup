@@ -35,10 +35,12 @@ $bp-largest: 120em;
     --gradient-bg: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
 
     //padding
-    --padding-link: 2rem 1.75rem;
+    --padding-link: 1.25rem 1.75rem;
+}
 
-
-
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 html {

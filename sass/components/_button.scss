@@ -2,7 +2,6 @@
 //////////////////
 // btn
 
-
 .btn {
     background-color: transparent;
     color: var(--color-white);
@@ -21,7 +20,7 @@
     }
 
     &:active {
-        transform: translateY(-3px);
+        transform: perspective(8rem) translate3D(0,-3px,3px);
     }
 
     &__link {
