@@ -1,0 +1,26 @@
+//////////////
+/////MEDIA QUERY MANAGER
+$breakpoints: (
+    xsmall-screen: 25em, //400px;
+    small-screen: 37.5em, //600px;
+    medium-screen: 48em, //768px;
+    large-screen: 25em, //400px;
+    xlarge-screen: 25em, //400px;
+);
+
+@mixin respond-above ($breakpoint) {
+    //Validate breakpoint
+    @if map-has-key($breakpoints, $breakpoint) {
+        //Get breakpoint value
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        //Assign breakpoint to media query
+        @media only screen and (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    //IF breakpoint does not exist
+    @else {
+        //Log a warning
+        @warn 'invalid breakpoint entry: ' +$breakpoint;
+    }
+}

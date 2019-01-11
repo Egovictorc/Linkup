@@ -8,6 +8,7 @@
     &__img {
         height: 4.3rem;
         width: auto;
+        margin-right: var(--gutter-horizontal-xs);
     }
 
     &__text {
@@ -19,8 +20,19 @@
 //////////////////////////////
 // ARTICLE
 .article {
-    margin: 0 auto;
+    margin: 0 auto  var(--gutter-vertical-sm);
     background-color: green;
+
+    @include respond-above(medium-screen) {
+    margin: 0;
+    }
+    @include respond-above(small-screen) {
+        max-width: 80%;
+    }
+    @include respond-above(medium-screen) {
+        max-width: 60%;
+        
+    }
 
     & > *:not(:last-child) {
         margin-bottom: var(--gutter-vertical-sm);

@@ -31,6 +31,9 @@ $bp-largest: 120em;
     --gutter-vertical-lg: 6rem;
     --gutter-vertical-sm: 2rem;
 
+    --gutter-horizontal-xs: .2rem;
+    --gutter-horizontal-sm: 2rem;
+
     // Gradient
     --gradient-bg: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
 
@@ -49,7 +52,7 @@ html {
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #fff;
-    padding: 1rem 1% 0;
+    padding: 1rem 2% 0;
     //font-weight: 400;
     //line-height: 1.6;
 }

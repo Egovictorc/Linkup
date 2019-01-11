@@ -9,7 +9,7 @@
     &__btn-wrapper {
         flex: 0 0 100%;
         margin-top: 0.5rem;
-        
+
         display: flex;
         justify-content: space-evenly;
     }
@@ -23,6 +23,8 @@
 
         &:last-child {
             flex: 0 0 40%;
+
+
         }
     }
 }
