@@ -3,13 +3,13 @@
 node_modules/
 main.js
 .eslintrc*
-css/
-
-css/style.min.css
-
+css/*.css
+css/*map
+!css/style.min.css
 *.txt
 
 css/fontawesome.css
+
 revealjs/
 js/
 *.config
