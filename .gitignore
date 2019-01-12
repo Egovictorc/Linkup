@@ -1,14 +1,19 @@
 
 *.json
 node_modules/
-main.js
 .eslintrc*
-css/
-*.txt
-css/all.css
-css/all.min.css
-css/fontawesome.css
+
+main.js
 revealjs/
 js/
+
+
+
+css/*.css
+css/*map
+!css/style.min.css
+
+*.txt
+
 *.config
 *.log
