@@ -1,5 +1,4 @@
 .header {
-    background-color: yellowgreen;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -8,10 +7,13 @@
     padding: 0 2%;
     max-width: $bp-largest;
 
+    @include respond-above(large-screen) {
+        align-items: stretch;
+    }
     .logo {
         margin-right: auto;
         @include respond-above(large-screen) {
-
+            //padding: 2rem 0;
         }
     }
 
@@ -26,22 +28,34 @@
         }
 
         &__list {
+            background-color: var(--color-white);
+            box-shadow: var(--shadow-box);
             @include respond-above(large-screen) {
+                background-color: transparent;
                 flex-direction: row;
                 width: auto;
                 position: static;
                 opacity: 1;
+                box-shadow: none;
             }
         }
         &__item {
+
             @include respond-above(large-screen) {
-                margin: 0;
+                margin: 0 2px 0 0;
             }
+            &::before {
+                @include respond-above(medium-screen) {
+                background-image: linear-gradient(105deg, var(--color-primary) 90%, var(--color-overlay) 90%);
+                }
+            }
+
         }
 
         &__link {
             @include respond-above(large-screen) {
             padding: var(--padding-link-md);
+            font-size: 1.8rem;
             }
         }
     }
@@ -74,7 +88,7 @@
         &:last-child {
             flex: 0 0 40%;
             @include respond-above(large-screen) {
-                flex: 0 0 auto;
+                flex: 0 0 80%;
             }
         }
     }

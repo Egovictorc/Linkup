@@ -4,7 +4,6 @@
 
 .btn {
     background-color: transparent;
-    color: var(--color-white);
     border: none;
     border-radius: 10rem;
     overflow: hidden;
@@ -12,8 +11,9 @@
     max-width: 200px;
 
     &--bg {
+        color: var(--color-white);
         background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
-        box-shadow: 0 .2rem .5rem rgba(0,0,0, .5);
+        box-shadow: var(--shadow-box);
 
         &:hover {
             background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
@@ -35,6 +35,7 @@
 
             @include respond-above(medium-screen) {
             padding: var(--padding-link-md);
+            font-size: var(--font-size-md);
             }
         }
     }

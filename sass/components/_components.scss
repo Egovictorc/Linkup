@@ -2,6 +2,7 @@
 ///Logo
 .logo {
     display: flex;
+    align-items: center;
 
     &__img {
         height: 4.3rem;
@@ -19,7 +20,6 @@
 // ARTICLE
 .article {
     margin: 0 auto  var(--gutter-vertical-sm);
-    background-color: green;
 
     @include respond-above(medium-screen) {
     margin: 0;
@@ -46,4 +46,33 @@
     &__btn {
         width: 60%;
     }
+}
+
+///////////////////
+//SHAPE
+//Will add shapes later
+.shape {
+
+    &__oval {
+
+    width: 34rem;
+    height: 14rem;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    transform: rotateZ(70deg);
+    position: absolute;
+    top: -33%;
+    left: -56%;
+    z-index: 1;
+
+    @include respond-above(medium-screen) {
+        top: -25%;
+        left: -36%;
+    }
+    @include respond-above(large-screen) {
+        top: -20%;
+        left: -16%;
+    }
+    }
+
 }
