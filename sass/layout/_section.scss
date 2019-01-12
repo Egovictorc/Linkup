@@ -7,7 +7,7 @@
         align-items: center;
         max-width: $bp-largest;
 
-        @include respond-above(medium-screen) {
+        @include respond-above(md-screen) {
             flex-direction: row;
         }
 
@@ -15,7 +15,7 @@
             margin-bottom: var(--gutter-vertical-lg);
         }
         .img-box {
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 margin: 0;
             }
         }
@@ -35,20 +35,20 @@
         .row {
             padding: 0 2%;
             &:not(:last-child) {
-                @include respond-above(medium-screen) {
+                @include respond-above(md-screen) {
                 justify-content: space-around;
                 padding: 0 10%;
                 }
             }
             &:last-child {
-                @include respond-above(medium-screen) {
+                @include respond-above(md-screen) {
                     justify-content: center;
                     padding: 0 4%;
                 }
             }
         }
         .article {
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 max-width: 50%;
                 padding: 2.5rem;
             }
@@ -57,7 +57,7 @@
         .article__linkup {
             background-image: linear-gradient(to right, #c1c1c1, #fff);
 
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 align-self: flex-end;
 
                 display: flex;
@@ -71,7 +71,7 @@
             max-width: 100%;
             margin: 0 auto;
 
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 flex: 0 0 40%;
             }
             //max-height: 300px;
@@ -80,7 +80,7 @@
 
     &-bottom {
         .row {
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 max-width: 80%;
                 justify-content: space-between;
             }
@@ -91,10 +91,10 @@
                 background-color: var(--color-secondary);
                 max-width: 100%;
                 justify-content: space-around;
-                padding: 6rem 0;
+                padding: 6rem 2%;
 
                 .article {
-                    @include respond-above(medium-screen) {
+                    @include respond-above(md-screen) {
                         max-width: 45%;
                     }
                 }
@@ -103,12 +103,12 @@
 
         .article {
 
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
                 max-width: 60%;
             }
 
             &__get-quote {
-                @include respond-above(medium-screen) {
+                @include respond-above(md-screen) {
                     order: 1;
                 }
             }
@@ -118,7 +118,7 @@
             max-width: 25%;
             margin: 0 auto;
 
-            @include respond-above(small-screen) {
+            @include respond-above(sm-screen) {
                 flex: 0 0 14%;
                 max-width: 17%;
             }

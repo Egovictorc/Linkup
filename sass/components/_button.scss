@@ -33,7 +33,7 @@
         &--padding {
             padding: var(--padding-link);
 
-            @include respond-above(medium-screen) {
+            @include respond-above(md-screen) {
             padding: var(--padding-link-md);
             font-size: var(--font-size-md);
             }

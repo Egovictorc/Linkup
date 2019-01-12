@@ -7,22 +7,22 @@
     padding: 0 2%;
     max-width: $bp-largest;
 
-    @include respond-above(large-screen) {
+    @include respond-above(lg-screen) {
         align-items: stretch;
     }
     .logo {
         margin-right: auto;
-        @include respond-above(large-screen) {
+        @include respond-above(lg-screen) {
             //padding: 2rem 0;
         }
     }
 
     .nav {
-        @include respond-above(large-screen) {
+        @include respond-above(lg-screen) {
             margin-right: var(--gutter-horizontal-md);
         }
         &__btn {
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
                 display: none;
             }
         }
@@ -30,7 +30,7 @@
         &__list {
             background-color: var(--color-white);
             box-shadow: var(--shadow-box);
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
                 background-color: transparent;
                 flex-direction: row;
                 width: auto;
@@ -41,11 +41,11 @@
         }
         &__item {
 
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
                 margin: 0 2px 0 0;
             }
             &::before {
-                @include respond-above(medium-screen) {
+                @include respond-above(md-screen) {
                 background-image: linear-gradient(105deg, var(--color-primary) 90%, var(--color-overlay) 90%);
                 }
             }
@@ -53,7 +53,7 @@
         }
 
         &__link {
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
             padding: var(--padding-link-md);
             font-size: 1.8rem;
             }
@@ -65,12 +65,12 @@
         margin-top: 0.5rem;
         display: flex;
         justify-content: space-evenly;
-        @include respond-above(small-screen) {
+        @include respond-above(sm-screen) {
             flex: 0 0 80%;
             margin-left: auto;
             margin-right: auto;
         }
-        @include respond-above(large-screen) {
+        @include respond-above(xl-screen) {
             flex: 0 0 auto;
             margin: 0;
         }
@@ -80,14 +80,14 @@
         &:first-child {
             flex: 0 0 auto;
             //margin-right: 2rem;
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
                 margin-right: var(--gutter-horizontal-sm);
             }
         }
 
         &:last-child {
             flex: 0 0 40%;
-            @include respond-above(large-screen) {
+            @include respond-above(lg-screen) {
                 flex: 0 0 80%;
             }
         }

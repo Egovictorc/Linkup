@@ -21,12 +21,13 @@
 .article {
     margin: 0 auto  var(--gutter-vertical-sm);
 
-    @include respond-above(medium-screen) {
-    margin: 0;
-    }
-    @include respond-above(small-screen) {
+    @include respond-above(sm-screen) {
         max-width: 80%;
     }
+    @include respond-above(md-screen) {
+    margin: 0;
+    }
+
 
     & > *:not(:last-child) {
         margin-bottom: var(--gutter-vertical-sm);
@@ -39,40 +40,53 @@
         font-size: 1.6rem;
         line-height: 1.6;
 
-        @include respond-above(medium-screen) {
+        @include respond-above(md-screen) {
         font-size: 1.8rem;
         }
     }
     &__btn {
-        width: 60%;
+        max-width: 60%;
+        @include respond-above(md-screen) {
+        max-width: 70%;
+        }
     }
 }
 
 ///////////////////
 //SHAPE
 //Will add shapes later
+/*
 .shape {
 
     &__oval {
 
-    width: 34rem;
-    height: 14rem;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
-    transform: rotateZ(70deg);
-    position: absolute;
-    top: -33%;
-    left: -56%;
-    z-index: 1;
+        width: 34rem;
+        height: 14rem;
+        border-radius: 50%;
+        background-color: var(--color-secondary);
+        transform: rotateZ(70deg);
+        position: absolute;
+        top: -33%;
+        left: -24.5rem;
+        z-index: 1;
 
-    @include respond-above(medium-screen) {
-        top: -25%;
-        left: -36%;
+        @include respond-above(sm-screen) {
+            left: -24rem;
+        }
+        @include respond-above(md-screen) {
+            left: -23.5rem;
+        }
+        @include respond-above(lg-screen) {
+            top: -18%;
+        }
+        @include respond-above(xlg-screen) {
+        //@media only screen and (max-width: 1250px)
+            left: -18rem;
+        }
+        @include respond-above(xxl-screen) {
+        //@media only screen and (max-width: 1250px)
+            left: -22.5rem;
+        }
     }
-    @include respond-above(large-screen) {
-        top: -20%;
-        left: -16%;
-    }
-    }
-
 }
+*/
