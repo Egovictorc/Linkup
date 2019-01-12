@@ -11,3 +11,4 @@ css/fontawesome.css
 revealjs/
 js/
 *.config
+*.log

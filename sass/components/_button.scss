@@ -2,18 +2,18 @@
 //////////////////
 // btn
 
-
 .btn {
     background-color: transparent;
-    color: var(--color-white);
     border: none;
     border-radius: 10rem;
     overflow: hidden;
     transition: .2s ease;
+    max-width: 200px;
 
     &--bg {
+        color: var(--color-white);
         background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
-        box-shadow: 0 .2rem .5rem rgba(0,0,0, .5);
+        box-shadow: var(--shadow-box);
 
         &:hover {
             background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
@@ -21,7 +21,7 @@
     }
 
     &:active {
-        transform: translateY(-3px);
+        transform: perspective(8rem) translate3D(0,-3px,3px);
     }
 
     &__link {
@@ -33,6 +33,10 @@
         &--padding {
             padding: var(--padding-link);
 
+            @include respond-above(md-screen) {
+            padding: var(--padding-link-md);
+            font-size: var(--font-size-md);
+            }
         }
     }
 }

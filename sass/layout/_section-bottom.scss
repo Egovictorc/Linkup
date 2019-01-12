@@ -1,0 +1,26 @@
+.section-bottom {
+
+    .row {
+
+        .article {
+            &__best-artisan {
+                background-color: var(--color-secondary);
+            }
+        }
+        .img-box {
+            background-color: red;
+            flex: 0 0 40%;
+            max-width: 50%;
+            margin: 0 auto;
+            //max-height: 300px;
+        }
+
+        &-img {
+            display: block;
+
+            //width: 100%;
+            object-fit: contain;
+            max-width: 100%;
+        }
+    }
+}

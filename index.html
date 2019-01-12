@@ -14,7 +14,7 @@
     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Source+Sans+Pro:regular,bold" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <link rel="icon" href="assets/favicon.png" sizes="16x16" />
 
     <base href="assets/" target="_self">
@@ -25,9 +25,13 @@
     Body begins here
   -->
   <body>
+    <!--
+      <div class="shape__oval">      </div>
+      -->
+
     <header class="header">
       <div class="logo">
-        <img src="brokenLink@2x.png" alt="logo-img" class="logo__img" href="">
+        <img src="brokenLink@2x.png" alt="logo-img" class="logo__img">
         <h1 class="logo__text heading-primary">LinkUp</h1>
       </div>
 
@@ -35,11 +39,16 @@
         <!--
             From here
         -->
-        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <input type="checkbox" class="nav__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="nav__btn">
+          <span class="nav__icon"></span>
+          </label>
 
+          <!--
          <svg class="nav__menu">
              <use href="sprite.svg#icon-menu" ></use>
          </svg>
+         -->
 
         <ul class="nav__list">
           <li class="nav__item">
@@ -68,33 +77,108 @@
     </header>
 
     <main class="main">
-      <section class="section">
+      <!--
+        section--top
+      -->
+      <section class="section section-top">
 
-        <div class="row skilled">
+        <div class="row row-request">
           <article class="article">
-            <h2 class="article__header">Request skilled artisan close to you</h2>
+            <h2 class="article__header heading-secondary">Request skilled artisan close to you</h2>
             <p class="article__paragraph">Never get stuck in any household issues again, easily connect with artisans close to you and live a stress free life </p>
-            <button class="btn btn--bg">
+            <button class="btn btn--bg article__btn">
               <a href="#" class="btn__link btn__link--padding article__link">Request an artisan</a>
             </button>
           </article>
-          <image src="ussd@2x.png" class="skilled__image"></image>
+          <picture class="img-box">
+            <source srcset="ussd@2x.png, ussd@2x.png 2x" class="row-img  skilled-img" alt="skilled-img" />
+            <img srcset="ussd@2x.png, ussd@2x.png 2x" class="row-img  skilled-img" alt="skilled-img" />
+          </picture>
         </div>
 
-        <div class="row linkup">
-          <article class="article">
-              <h2 class="article__header">LinkUp in Action</h2>
+        <div class="row row-linkup">
+          <article class="article article__linkup">
+              <h3 class="article__header heading-tertiary">LinkUp in Action</h3>
               <p class="article__paragraph">Solve your household task easily with a click of a button, by requesting skilled artisans in your neighbourhood </p>
               <p class="article__paragraph">You can do this without the internet, just dial our USSD code and request for the best artisans in your environs It's that simple </p>
           </article>
-          <image src="nopath@2x.png" class="skilled__image"></image>
+          <picture class="img-box">
+            <source srcset="nopath@2x.png, nopath@2x.png 2x" class="linkup-img row-img" alt="linkup-img"/>
+            <img srcset="nopath@2x.png, nopath@2x.png 2x" class="linkup-img row-img" alt="linkup-img" />
+          </picture>
         </div>
 
       </section>
-      <section class="section"></section>
+      <!--
+        section--bottom begins here
+      -->
+      <section class="section section-bottom">
+        <h3 class="heading-tertiary section-heading">How It Works</h3>
+
+        <div class="row row-req-artisan"><article class="article article__request-artisan">
+            <h3 class="article__header heading-tertiary">Request an Artisan</h3>
+            <p class="article__paragraph">Dial the USSD code and request close to you. We have made this process as easy as possible</p>
+        </article>
+
+        <picture class="img-box">
+            <source srcset="contact@2x.png, contact@2x.png 2x" class="linkup-img row-img" alt="linkup-img" />
+            <img srcset="contact@2x.png, contact@2x.png 2x" class="linkup-img row-img" alt="linkup-img" />
+        </picture>
+        </div>
+        <!--
+          get quote begins here
+        -->
+        <div class="row row-get-quote"><article class="article article__get-quote">
+            <h3 class="article__header heading-tertiary">Get a quote</h3>
+            <p class="article__paragraph">Our skilled artisans will give you a quote for the required job to be done, don't worry this price is standardized and regulated by us</p>
+        </article>
+
+        <picture class="img-box">
+            <source srcset="discount@2x.png, discount@2x.png 2x" class="linkup-img row-img" alt="linkup-img" />
+            <img srcset="discount@2x.png, discount@2x.png 2x" class="linkup-img row-img" alt="linkup-img" />
+        </picture>
+        </div>
+        <!--
+          Job-done begins here
+        -->
+        <div class="row row-job-done">
+            <article class="article article__job-done">
+            <h3 class="article__header heading-tertiary">Get your Job Done</h3>
+            <p class="article__paragraph">Our skilled artisans are adequately skilled to get the job done. 100% guarantee</p>
+        </article>
+
+        <picture class="img-box">
+            <source srcset="validate@2x.png, validate@2x.png 2x" class="row-img" alt="favicon-img" />
+            <img srcset="validate@2x.png, validate@2x.png 2x" class="row-img" alt="favicon-img" />
+        </picture>
+        </div>
+        <!--
+          best-artisans begins here
+        -->
+
+        <div class="row row-best-artisan">
+          <article class="article article__best-artisan">
+            <h3 class="article__header heading-tertiary">We provide you with the best Artisans around You</h3>
+            <p class="article__paragraph">With our rating system, we make sure you get only the best Artisans to help you with your task. Remember to always leave a review</p>
+        </article>
+
+        <picture class="img-box">
+            <source srcset="review@2x.png, review@2x.png 2x" class="linkup-img row-img" alt="reviews-img" />
+            <img srcset="review@2x.png, review@2x.png 2x" class="linkup-img row-img" alt="reviews-img" />
+        </picture>
+        </div>
+      </section>
 
     </main>
-  </body>
 
+    <!--
+      footer begins here
+    -->
+    <footer class="footer">
+      <div class="footer__row">
+          <small>Copyright &copy; 2018</small>
+      </div>
+    </footer>
+  </body>
 
 </html>

@@ -1,0 +1,27 @@
+//////////////
+/////MEDIA QUERY MANAGER
+$breakpoints: (
+    xs-screen: 25em, //400px;
+    sm-screen: 37.5em, //600px;
+    md-screen: 48em, //768px;
+    lg-screen: 62em, //992px;
+    xl-screen: 64em, //1024px;
+    xxl-screen: 75em, //1200px;
+);
+
+@mixin respond-above ($breakpoint) {
+    //Validate breakpoint
+    @if map-has-key($breakpoints, $breakpoint) {
+        //Get breakpoint value
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        //Assign breakpoint to media query
+        @media only screen and (min-width: $breakpoint-value) {
+            @content;
+        }
+    }
+    //IF breakpoint does not exist
+    @else {
+        //Log a warning
+        @warn 'invalid breakpoint entry: ' +$breakpoint;
+    }
+}
