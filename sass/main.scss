@@ -6,8 +6,13 @@
 @import 'base/reset';
 @import 'base/typography';
 
+@import 'components/nav';
 @import 'components/components';
 @import 'components/button';
 
 @import 'layout/header';
 @import 'layout/layout';
+@import 'layout/section';
+//@import 'layout/section-top';
+//@import 'layout/section-bottom';
+@import 'layout/footer';

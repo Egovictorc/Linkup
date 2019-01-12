@@ -4,10 +4,13 @@ node_modules/
 main.js
 .eslintrc*
 css/
+
+css/style.min.css
+
 *.txt
-css/all.css
-css/all.min.css
+
 css/fontawesome.css
 revealjs/
 js/
 *.config
+*.log
