@@ -30,6 +30,7 @@
         &__list {
             background-color: var(--color-white);
             box-shadow: var(--shadow-box);
+        
             @include respond-above(lg-screen) {
                 background-color: transparent;
                 flex-direction: row;

@@ -18,8 +18,9 @@
     }
 
     &__checkbox:checked ~ &__list {
-        width: 100%;
+        width: 98%;
         opacity: 1;
+
     }
     &__checkbox:checked + &__btn &__icon {
         background-color: transparent;
@@ -79,7 +80,7 @@
         list-style: none;
         position: absolute;
         top: 48px;
-        right: 0;
+        right: 1%;
         width: 0;
         overflow: hidden;
         display: flex;
@@ -90,6 +91,10 @@
         opacity: 0;
 
         transition: all .5s cubic-bezier(1, 0, 0, 1);
+
+        @include respond-above (lg-screen) {
+            right: 0%;
+        }
 
     }
 

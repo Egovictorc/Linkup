@@ -13,11 +13,13 @@
   --color-tertiary: #c1c1c1;
   --color-white: #fff;
   --color-overlay: rgba(0, 0, 0, .9);
+  --color-hover: #c1c1c1;
   --font-link: 1.6rem;
   --font-size-md: 1.8rem;
-  --gutter-vertical: 3rem;
-  --gutter-vertical-lg: 6rem;
   --gutter-vertical-sm: 2rem;
+  --gutter-vertical: 3rem;
+  --gutter-vertical-md: 4rem;
+  --gutter-vertical-lg: 6rem;
   --gutter-horizontal-xs: .2rem;
   --gutter-horizontal-sm: 2rem;
   --gutter-horizontal-md: 5rem;
@@ -54,7 +56,7 @@ body {
 
 .section-heading {
   text-align: center;
-  margin-bottom: var(--gutter-vertical); }
+  margin-bottom: var(--gutter-vertical-sm); }
 
 .nav {
   /*
@@ -80,7 +82,7 @@ body {
   .nav__btn:hover .nav__icon::after {
     top: 1rem; }
   .nav__checkbox:checked ~ .nav__list {
-    width: 100%;
+    width: 98%;
     opacity: 1; }
   .nav__checkbox:checked + .nav__btn .nav__icon {
     background-color: transparent; }
@@ -111,7 +113,7 @@ body {
     list-style: none;
     position: absolute;
     top: 48px;
-    right: 0;
+    right: 1%;
     width: 0;
     overflow: hidden;
     display: flex;
@@ -121,6 +123,9 @@ body {
     white-space: nowrap;
     opacity: 0;
     transition: all 0.5s cubic-bezier(1, 0, 0, 1); }
+    @media only screen and (min-width: 62em) {
+      .nav__list {
+        right: 0%; } }
   .nav__item {
     text-align: center;
     position: relative; }
@@ -225,6 +230,8 @@ body {
   overflow: hidden;
   transition: .2s ease;
   max-width: 200px; }
+  .btn--no-bg:hover {
+    color: var(--color-hover); }
   .btn--bg {
     color: var(--color-white);
     background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
@@ -331,7 +338,7 @@ body {
     max-width: 500px; }
 
 .section-top {
-  margin-bottom: var(--gutter-vertical-lg); }
+  margin-bottom: calc(2 * var(--gutter-vertical-md)); }
   .section-top .row {
     padding: 0 2%; }
     @media only screen and (min-width: 48em) {
@@ -390,11 +397,18 @@ body {
 .section-bottom .img-box {
   flex: 0 0 20%;
   max-width: 25%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  perspective: 100rem; }
   @media only screen and (min-width: 37.5em) {
     .section-bottom .img-box {
       flex: 0 0 14%;
       max-width: 17%; } }
+
+.section-bottom .row-img {
+  transform: rotateY(35deg);
+  transition: .3s ease; }
+  .section-bottom .row-img:hover {
+    transform: rotateY(0deg); }
 
 .footer {
   background-color: var(--color-tertiary); }

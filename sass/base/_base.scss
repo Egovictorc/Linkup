@@ -24,6 +24,8 @@ $bp-largest: 120em;
     --color-white: #fff;
     --color-overlay: rgba(0, 0, 0, .9);
 
+    --color-hover: #c1c1c1;
+
     //Heading
 
 
@@ -32,9 +34,11 @@ $bp-largest: 120em;
     --font-size-md: 1.8rem;
 
     //Gutter
-    --gutter-vertical: 3rem;
-    --gutter-vertical-lg: 6rem;
     --gutter-vertical-sm: 2rem;
+    --gutter-vertical: 3rem;
+    --gutter-vertical-md: 4rem;
+    --gutter-vertical-lg: 6rem;
+    
 
     --gutter-horizontal-xs: .2rem;
     --gutter-horizontal-sm: 2rem;

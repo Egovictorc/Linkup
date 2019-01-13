@@ -9,7 +9,10 @@
     overflow: hidden;
     transition: .2s ease;
     max-width: 200px;
-
+    
+    &--no-bg:hover {
+        color: var(--color-hover);
+    }
     &--bg {
         color: var(--color-white);
         background-image: linear-gradient(to right, var(--color-primary), var(--color-primary-dark) );
